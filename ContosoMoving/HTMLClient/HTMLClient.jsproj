@@ -1,0 +1,1266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>d9a1f98c-7782-4533-8699-6a81bbd1fd3f</ProjectGuid>
+    <LightSwitchVersion>v5.0</LightSwitchVersion>
+    <LightSwitchProjectTypeV45>Client</LightSwitchProjectTypeV45>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852C6-CD72-467D-83FE-5EEB1973A190}</ProjectTypeGuids>
+    <DefaultLanguage>it</DefaultLanguage>
+    <SupportedCultures>it</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\Server\Server.vbproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\clippy.css" />
+    <Content Include="Content\dark-theme-2.5.4.css" />
+    <Content Include="Content\dark-theme.css" />
+    <Content Include="Content\default-responsive.css" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\ejgrid.responsive.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.olappager.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.theme.min.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.web.all.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.web.all.min.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.widgets.all.css" />
+    <Content Include="Content\ej\bootstrap-theme\ej.widgets.all.min.css" />
+    <Content Include="Content\ej\bootstrap-theme\images\ajax-loader.gif" />
+    <Content Include="Content\ej\bootstrap-theme\images\checkedtick.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\dot.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\drop-sibling.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\gradient.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\palette-arrow.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\rating-star.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\rotator-icon.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\toggle-text.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\toolbar_icons.png" />
+    <Content Include="Content\ej\bootstrap-theme\images\waitingpopup.gif" />
+    <Content Include="Content\ej\common-images\colorpicker_dark.png" />
+    <Content Include="Content\ej\common-images\colorpicker_light.png" />
+    <Content Include="Content\ej\common-images\diagram_context.png" />
+    <Content Include="Content\ej\common-images\diagram_context1.png" />
+    <Content Include="Content\ej\common-images\ejicons.eot" />
+    <Content Include="Content\ej\common-images\ejicons.svg" />
+    <Content Include="Content\ej\common-images\ejicons.ttf" />
+    <Content Include="Content\ej\common-images\ejicons.woff" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Bootom.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Bootom_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Left.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Left_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Right.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Right_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Top.png" />
+    <Content Include="Content\ej\common-images\maps\Arrow_Top_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Bar.png" />
+    <Content Include="Content\ej\common-images\maps\Home.png" />
+    <Content Include="Content\ej\common-images\maps\Home_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Home_hover_lime.png" />
+    <Content Include="Content\ej\common-images\maps\Home_hover_saffron.png" />
+    <Content Include="Content\ej\common-images\maps\Home_lime.png" />
+    <Content Include="Content\ej\common-images\maps\Home_saffron.png" />
+    <Content Include="Content\ej\common-images\maps\Navicatior.png" />
+    <Content Include="Content\ej\common-images\maps\Zoom-In.png" />
+    <Content Include="Content\ej\common-images\maps\Zoom-In_hover.png" />
+    <Content Include="Content\ej\common-images\maps\Zoom-out.png" />
+    <Content Include="Content\ej\common-images\maps\Zoom-out_hover.png" />
+    <Content Include="Content\ej\common-images\olapkpi\circle.png" />
+    <Content Include="Content\ej\common-images\olapkpi\diamond.png" />
+    <Content Include="Content\ej\common-images\olapkpi\down-arrow.png" />
+    <Content Include="Content\ej\common-images\olapkpi\green.png" />
+    <Content Include="Content\ej\common-images\olapkpi\red.png" />
+    <Content Include="Content\ej\common-images\olapkpi\right-arrow.png" />
+    <Content Include="Content\ej\common-images\olapkpi\three-color.png" />
+    <Content Include="Content\ej\common-images\olapkpi\triangle.png" />
+    <Content Include="Content\ej\common-images\olapkpi\up-arrow.png" />
+    <Content Include="Content\ej\common-images\radialmenu\back.png" />
+    <Content Include="Content\ej\common-images\radialmenu\radial.png" />
+    <Content Include="Content\ej\common-images\reports\minus.gif" />
+    <Content Include="Content\ej\common-images\reports\plus.gif" />
+    <Content Include="Content\ej\common-images\Rotate.cur" />
+    <Content Include="Content\ej\common-images\schedule_priority.png" />
+    <Content Include="Content\ej\ej.widgets.core.css" />
+    <Content Include="Content\ej\ej.widgets.core.min.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.accordion.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.autocomplete.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.button.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.captcha.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.checkbox.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.colorpicker.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.datepicker.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.datetimepicker.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.diagram.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.dialog.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.dropdownlist.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.editor.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.excelfilter.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.gantt.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.ganttchart.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.grid.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.listbox.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.listview.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.map.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.menu.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.navigationdrawer.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.olapchart.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.olapclient.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.olapgauge.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.olappager.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.pager.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.pivotgrid.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.pivotpager.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.progressbar.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.radialmenu.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.radiobutton.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.rating.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.reportviewer.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.ribbon.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.rotator.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.rte.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.schedule.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.scrollbar.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.scroller.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.slider.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.splitter.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.symbolpalette.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.tab.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.tagcloud.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.theme.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.tile.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.timepicker.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.toolbar.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.treegrid.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.treeview.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.uploadbox.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.waitingpopup.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.web.all.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.widgets.all.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.widgets.all.min.css" />
+    <Content Include="Content\ej\flat-azure-dark\ej.widgets.core.css" />
+    <Content Include="Content\ej\flat-azure-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\flat-azure-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\dot.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\gradient.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\palette-arrow.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\rating-star.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\toggle-text.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\toolbar_icons.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\ui-icon.png" />
+    <Content Include="Content\ej\flat-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.olappager.css" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.web.all.css" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.widgets.all.css" />
+    <Content Include="Content\ej\gradient-azure-dark\ej.widgets.all.min.css" />
+    <Content Include="Content\ej\gradient-azure-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\gradient-azure-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\dot.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\gradient.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\palette-arrow.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\rating-star.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\toggle-text.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\toolbar_icons.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\ui-icon.png" />
+    <Content Include="Content\ej\gradient-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.olappager.css" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.web.all.css" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.widgets.all.css" />
+    <Content Include="Content\ej\gradient-lime-dark\ej.widgets.all.min.css" />
+    <Content Include="Content\ej\gradient-lime-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\gradient-lime-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\gradient.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\palette-arrow.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\rating-star.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\toggle-text.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\toolbar_icons.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\ui-icon.png" />
+    <Content Include="Content\ej\gradient-lime-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.olappager.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.web.all.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.widgets.all.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\ej.widgets.all.min.css" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\dot.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\gradient.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\palette-arrow.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\rating-star.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\toggle-text.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\toolbar_icons.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\ui-icon.png" />
+    <Content Include="Content\ej\gradient-saffron-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\responsive-css\ej.responsive.css" />
+    <Content Include="Content\ej\responsive-css\ejgrid.responsive.css" />
+    <Content Include="Content\Images\0.gif" />
+    <Content Include="Content\Images\00House.png" />
+    <Content Include="Content\Images\01People.png" />
+    <Content Include="Content\Images\02Project.png" />
+    <Content Include="Content\Images\03Documents.png" />
+    <Content Include="Content\Images\04Calendar.png" />
+    <Content Include="Content\Images\05Graph.png" />
+    <Content Include="Content\Images\06Configuration.png" />
+    <Content Include="Content\Images\07Mailbox.png" />
+    <Content Include="Content\Images\08Clock.png" />
+    <Content Include="Content\Images\09Schedule.png" />
+    <Content Include="Content\Images\1.gif" />
+    <Content Include="Content\Images\10CPU.png" />
+    <Content Include="Content\Images\11BusinessUnit.png" />
+    <Content Include="Content\Images\12Resources.png" />
+    <Content Include="Content\Images\14Supplier.png" />
+    <Content Include="Content\Images\15Administration.png" />
+    <Content Include="Content\Images\16Products.png" />
+    <Content Include="Content\Images\17Marketing.png" />
+    <Content Include="Content\Images\18Salon.png" />
+    <Content Include="Content\Images\accept.png" />
+    <Content Include="Content\Images\Accessibility.png" />
+    <Content Include="Content\Images\accordion.png" />
+    <Content Include="Content\Images\Add-New.png" />
+    <Content Include="Content\Images\Add-To-Cart.png" />
+    <Content Include="Content\Images\add.png" />
+    <Content Include="Content\Images\Agenda.png" />
+    <Content Include="Content\Images\Agenti.png" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\Alerting.png" />
+    <Content Include="Content\Images\Amministrazione.png" />
+    <Content Include="Content\Images\Amministrazione2.png" />
+    <Content Include="Content\Images\Amministrazione3.png" />
+    <Content Include="Content\Images\application_add.png" />
+    <Content Include="Content\Images\Appointment.png" />
+    <Content Include="Content\Images\Approve.png" />
+    <Content Include="Content\Images\articoli.png" />
+    <Content Include="Content\Images\Balance1.png" />
+    <Content Include="Content\Images\Bank.png" />
+    <Content Include="Content\Images\barBlue.png" />
+    <Content Include="Content\Images\barChartB.png" />
+    <Content Include="Content\Images\Barcode.png" />
+    <Content Include="Content\Images\barcode2b.png" />
+    <Content Include="Content\Images\barCyan.png" />
+    <Content Include="Content\Images\barGreen.png" />
+    <Content Include="Content\Images\barOrange.png" />
+    <Content Include="Content\Images\barRed.png" />
+    <Content Include="Content\Images\barYellow.png" />
+    <Content Include="Content\Images\bi.jpg" />
+    <Content Include="Content\Images\Branch - 03.png" />
+    <Content Include="Content\Images\calculator128.png" />
+    <Content Include="Content\Images\calculator_accept.png" />
+    <Content Include="Content\Images\calculator_add.png" />
+    <Content Include="Content\Images\Calendar-Day.png" />
+    <Content Include="Content\Images\Calendar-Month.png" />
+    <Content Include="Content\Images\Calendar-Week.png" />
+    <Content Include="Content\Images\calendar.png" />
+    <Content Include="Content\Images\Calendar1.png" />
+    <Content Include="Content\Images\calendar_date.png" />
+    <Content Include="Content\Images\Camera.png" />
+    <Content Include="Content\Images\Caricamento_Iniziale.png" />
+    <Content Include="Content\Images\Carte.png" />
+    <Content Include="Content\Images\Cassa.png" />
+    <Content Include="Content\Images\category.png" />
+    <Content Include="Content\Images\Category1.png" />
+    <Content Include="Content\Images\Cecklist.png" />
+    <Content Include="Content\Images\Chart - 03.png" />
+    <Content Include="Content\Images\chart.png" />
+    <Content Include="Content\Images\chart_search.png" />
+    <Content Include="Content\Images\CheckEmployee.png" />
+    <Content Include="Content\Images\Chiusura_Cassa.png" />
+    <Content Include="Content\Images\Clienti.png" />
+    <Content Include="Content\Images\clock_add.png" />
+    <Content Include="Content\Images\Collaboratori.png" />
+    <Content Include="Content\Images\comments_add.png" />
+    <Content Include="Content\Images\Comuni.png" />
+    <Content Include="Content\Images\Comunicare.png" />
+    <Content Include="Content\Images\Configuration.png" />
+    <Content Include="Content\Images\Configurazione.png" />
+    <Content Include="Content\Images\Contators.jpg" />
+    <Content Include="Content\Images\Counter.png" />
+    <Content Include="Content\Images\Country.png" />
+    <Content Include="Content\Images\Crm.png" />
+    <Content Include="Content\Images\Customer.png" />
+    <Content Include="Content\Images\Customer_Search.png" />
+    <Content Include="Content\Images\database_add.png" />
+    <Content Include="Content\Images\database_search.png" />
+    <Content Include="Content\Images\DataHistory1.png" />
+    <Content Include="Content\Images\delete.png" />
+    <Content Include="Content\Images\delete24.png" />
+    <Content Include="Content\Images\delete32.png" />
+    <Content Include="Content\Images\document.png" />
+    <Content Include="Content\Images\Door.png" />
+    <Content Include="Content\Images\drawericon.png" />
+    <Content Include="Content\Images\edit.png" />
+    <Content Include="Content\Images\Employees.png" />
+    <Content Include="Content\Images\Escalator.png" />
+    <Content Include="Content\Images\Events.png" />
+    <Content Include="Content\Images\exclamation.png" />
+    <Content Include="Content\Images\Export-Chart.png" />
+    <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Images\favorite.png" />
+    <Content Include="Content\Images\favorite128.png" />
+    <Content Include="Content\Images\Ferie.png" />
+    <Content Include="Content\Images\Fidelity.png" />
+    <Content Include="Content\Images\Fidelity1.png" />
+    <Content Include="Content\Images\FidelityCard.png" />
+    <Content Include="Content\Images\FlagBlue.png" />
+    <Content Include="Content\Images\FlagGreen.png" />
+    <Content Include="Content\Images\FlagOrange.png" />
+    <Content Include="Content\Images\FlagRed.png" />
+    <Content Include="Content\Images\FlagYellow.png" />
+    <Content Include="Content\Images\folder_edit.png" />
+    <Content Include="Content\Images\Geolocalization.png" />
+    <Content Include="Content\Images\globe.png" />
+    <Content Include="Content\Images\globe_computer.png" />
+    <Content Include="Content\Images\globe_up.png" />
+    <Content Include="Content\Images\Google.png" />
+    <Content Include="Content\Images\HumanResource1.png" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\image_add.png" />
+    <Content Include="Content\Images\important.png" />
+    <Content Include="Content\Images\Incasso.png" />
+    <Content Include="Content\Images\Incentive.png" />
+    <Content Include="Content\Images\Incentives.png" />
+    <Content Include="Content\Images\Incentives1.png" />
+    <Content Include="Content\Images\Incentives3.png" />
+    <Content Include="Content\Images\Incentives5.png" />
+    <Content Include="Content\Images\Incentivi.png" />
+    <Content Include="Content\Images\Inventory.png" />
+    <Content Include="Content\Images\iva.png" />
+    <Content Include="Content\Images\JobHours.png" />
+    <Content Include="Content\Images\Lassie.png" />
+    <Content Include="Content\Images\ledger.png" />
+    <Content Include="Content\Images\linkedin.png" />
+    <Content Include="Content\Images\List.png" />
+    <Content Include="Content\Images\lock.png" />
+    <Content Include="Content\Images\login.jpg" />
+    <Content Include="Content\Images\logo-saloncoach.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\mail_add.png" />
+    <Content Include="Content\Images\Marketing.png" />
+    <Content Include="Content\Images\Message-Edit.png" />
+    <Content Include="Content\Images\Messagistica.png" />
+    <Content Include="Content\Images\mobile_phone_add.png" />
+    <Content Include="Content\Images\modulistica.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\Next.png" />
+    <Content Include="Content\Images\note_add.png" />
+    <Content Include="Content\Images\note_lock.png" />
+    <Content Include="Content\Images\Offers1.png" />
+    <Content Include="Content\Images\Offerta.png" />
+    <Content Include="Content\Images\operazioniContabili.png" />
+    <Content Include="Content\Images\Orario_di_Lavoro.png" />
+    <Content Include="Content\Images\Orario_di_Lavoro1.png" />
+    <Content Include="Content\Images\Order.png" />
+    <Content Include="Content\Images\Pagamenti1.png" />
+    <Content Include="Content\Images\Pagamenti_scaduti.png" />
+    <Content Include="Content\Images\Payment.png" />
+    <Content Include="Content\Images\Photos.png" />
+    <Content Include="Content\Images\previous.png" />
+    <Content Include="Content\Images\printer.png" />
+    <Content Include="Content\Images\Privacy.png" />
+    <Content Include="Content\Images\process.png" />
+    <Content Include="Content\Images\process_add.png" />
+    <Content Include="Content\Images\Provvigioni1.png" />
+    <Content Include="Content\Images\Provvigioni2.png" />
+    <Content Include="Content\Images\Refuse.png" />
+    <Content Include="Content\Images\regalo.png" />
+    <Content Include="Content\Images\Region.png" />
+    <Content Include="Content\Images\Reload.png" />
+    <Content Include="Content\Images\remove.png" />
+    <Content Include="Content\Images\repeat.png" />
+    <Content Include="Content\Images\RicevutaFiscale.png" />
+    <Content Include="Content\Images\room.png" />
+    <Content Include="Content\Images\Safety_Task_Force.png" />
+    <Content Include="Content\Images\Sales-Order.png" />
+    <Content Include="Content\Images\Salon.png" />
+    <Content Include="Content\Images\SalonBooker.png" />
+    <Content Include="Content\Images\Scadenzario.png" />
+    <Content Include="Content\Images\Sementazione1.png" />
+    <Content Include="Content\Images\Servizi.png" />
+    <Content Include="Content\Images\settore.png" />
+    <Content Include="Content\Images\Shopping.png" />
+    <Content Include="Content\Images\shopping_cart_add.png" />
+    <Content Include="Content\Images\shopping_cart_up.png" />
+    <Content Include="Content\Images\Sospeso.png" />
+    <Content Include="Content\Images\Sotto_Scorta.png" />
+    <Content Include="Content\Images\Spese.png" />
+    <Content Include="Content\Images\Statistiche.png" />
+    <Content Include="Content\Images\Statistiche1.png" />
+    <Content Include="Content\Images\Statistiche2.png" />
+    <Content Include="Content\Images\Statistiche3.png" />
+    <Content Include="Content\Images\Statistiche4.png" />
+    <Content Include="Content\Images\Statistiche5.png" />
+    <Content Include="Content\Images\Statistiche6.png" />
+    <Content Include="Content\Images\Statistiche7.png" />
+    <Content Include="Content\Images\Statistiche8.png" />
+    <Content Include="Content\Images\Statistiche_Incentivi.png" />
+    <Content Include="Content\Images\StoricoOperazioniCassa.png" />
+    <Content Include="Content\Images\Succursali.png" />
+    <Content Include="Content\Images\Suppliers.png" />
+    <Content Include="Content\Images\Suppliers1.png" />
+    <Content Include="Content\Images\tab.png" />
+    <Content Include="Content\Images\Ticket.png" />
+    <Content Include="Content\Images\Timer.png" />
+    <Content Include="Content\Images\TimeTraker.png" />
+    <Content Include="Content\Images\ToDoList.png" />
+    <Content Include="Content\Images\Tooltip.png" />
+    <Content Include="Content\Images\TopTen.png" />
+    <Content Include="Content\Images\TopTen1.png" />
+    <Content Include="Content\Images\Treatments.png" />
+    <Content Include="Content\Images\Trend.png" />
+    <Content Include="Content\Images\Trend1.png" />
+    <Content Include="Content\Images\Turnazione.png" />
+    <Content Include="Content\Images\twitter.png" />
+    <Content Include="Content\Images\Upload.png" />
+    <Content Include="Content\Images\user-logo.ico" />
+    <Content Include="Content\Images\user-logo100.png" />
+    <Content Include="Content\Images\User-New.png" />
+    <Content Include="Content\Images\users.png" />
+    <Content Include="Content\Images\user_add.png" />
+    <Content Include="Content\Images\white-Barber.png" />
+    <Content Include="Content\Images\white-Calendar.png" />
+    <Content Include="Content\Images\white-Hair_Stylist.png" />
+    <Content Include="Content\Images\white-User.png" />
+    <Content Include="Content\Images\zoom_in.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile-1.3.2.css" />
+    <Content Include="Content\jquery.mobile-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.2.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.2.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.min.css" />
+    <Content Include="Content\jquery.wijmo-open.3.20141.34.css" />
+    <Content Include="Content\light-theme-2.5.4.css" />
+    <Content Include="Content\light-theme.css" />
+    <Content Include="Content\msls-2.5.4.css" />
+    <Content Include="Content\msls-2.5.4.min.css" />
+    <Content Include="Content\msls-dark-2.5.4.css" />
+    <Content Include="Content\msls-dark.css" />
+    <Content Include="Content\msls-light-2.5.4.css" />
+    <Content Include="Content\msls-light.css" />
+    <Content Include="Content\print.css" />
+    <Content Include="default.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\Account_Operations\BrowseAccount_Operations.lsml.js">
+      <DependentUpon>BrowseAccount_Operations.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Account_Operations\ViewAccount_Operation.lsml.js">
+      <DependentUpon>ViewAccount_Operation.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditAccount_List.lsml.js">
+      <DependentUpon>AddEditAccount_List.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditAgent.lsml.js">
+      <DependentUpon>AddEditAgent.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCome_Back_Template.lsml.js">
+      <DependentUpon>AddEditCome_Back_Template.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCompany.lsml.js">
+      <DependentUpon>AddEditCompany.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCompany_Bank.lsml.js">
+      <DependentUpon>AddEditCompany_Bank.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCompany_branche.lsml.js">
+      <DependentUpon>AddEditCompany_branche.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCompany_Timetable.lsml.js">
+      <DependentUpon>AddEditCompany_Timetable.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditComunication.lsml.js">
+      <DependentUpon>AddEditComunication.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCounter.lsml.js">
+      <DependentUpon>AddEditCounter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCustomer.lsml.js">
+      <DependentUpon>AddEditCustomer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCustomer_Promote.lsml.js">
+      <DependentUpon>AddEditCustomer_Promote.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCustomer_Subscription.lsml.js">
+      <DependentUpon>AddEditCustomer_Subscription.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditCustomer_Subscription_Item.lsml.js">
+      <DependentUpon>AddEditCustomer_Subscription_Item.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditEmployee.lsml.js">
+      <DependentUpon>AddEditEmployee.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditEmployee_Incentive_Plan.lsml.js">
+      <DependentUpon>AddEditEmployee_Incentive_Plan.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditEmployee_Time_Marker.lsml.js">
+      <DependentUpon>AddEditEmployee_Time_Marker.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditEmployes_Timetable.lsml.js">
+      <DependentUpon>AddEditEmployes_Timetable.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditFidelity_Card.lsml.js">
+      <DependentUpon>AddEditFidelity_Card.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditGeo_City.lsml.js">
+      <DependentUpon>AddEditGeo_City.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditMenu.lsml.js">
+      <DependentUpon>AddEditMenu.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditMessaging.lsml.js">
+      <DependentUpon>AddEditMessaging.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditOffers_Detail.lsml.js">
+      <DependentUpon>AddEditOffers_Detail.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditOrder.lsml.js">
+      <DependentUpon>AddEditOrder.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditOrder_Cart.lsml.js">
+      <DependentUpon>AddEditOrder_Cart.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditOrder_Item.lsml.js">
+      <DependentUpon>AddEditOrder_Item.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditOrder_Item_Sell.lsml.js">
+      <DependentUpon>AddEditOrder_Item_Sell.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditPhoto.lsml.js">
+      <DependentUpon>AddEditPhoto.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditPreLoad.lsml.js">
+      <DependentUpon>AddEditPreLoad.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct.lsml.js">
+      <DependentUpon>AddEditProduct.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Brand.lsml.js">
+      <DependentUpon>AddEditProduct_Brand.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Category.lsml.js">
+      <DependentUpon>AddEditProduct_Category.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Color.lsml.js">
+      <DependentUpon>AddEditProduct_Color.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Document.lsml.js">
+      <DependentUpon>AddEditProduct_Document.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_History.lsml.js">
+      <DependentUpon>AddEditProduct_History.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Offer.lsml.js">
+      <DependentUpon>AddEditProduct_Offer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Service.lsml.js">
+      <DependentUpon>AddEditProduct_Service.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditProduct_Tax.lsml.js">
+      <DependentUpon>AddEditProduct_Tax.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditSchedule.lsml.js">
+      <DependentUpon>AddEditSchedule.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditSector.lsml.js">
+      <DependentUpon>AddEditSector.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditSelling.lsml.js">
+      <DependentUpon>AddEditSelling.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditService_Offer.lsml.js">
+      <DependentUpon>AddEditService_Offer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditService_Product.lsml.js">
+      <DependentUpon>AddEditService_Product.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditSupplier.lsml.js">
+      <DependentUpon>AddEditSupplier.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditWorkSpace.lsml.js">
+      <DependentUpon>AddEditWorkSpace.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Appointment4ScheduleScheduleMultipleResourceTemplate.lsml.js">
+      <DependentUpon>Appointment4ScheduleScheduleMultipleResourceTemplate.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAccounts.lsml.js">
+      <DependentUpon>BrowseAccounts.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAccount_Ledgers.lsml.js">
+      <DependentUpon>BrowseAccount_Ledgers.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAccount_Lists.lsml.js">
+      <DependentUpon>BrowseAccount_Lists.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAgentByName.lsml.js">
+      <DependentUpon>BrowseAgentByName.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAppointment1.lsml.js">
+      <DependentUpon>BrowseAppointment1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAppointments.lsml.js">
+      <DependentUpon>BrowseAppointments.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAppointment_By_Date.lsml.js">
+      <DependentUpon>BrowseAppointment_By_Date.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseAvailableEmployees.lsml.js">
+      <DependentUpon>BrowseAvailableEmployees.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCash_Operation.lsml.js">
+      <DependentUpon>BrowseCash_Operation.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCome_Back_Templates.lsml.js">
+      <DependentUpon>BrowseCome_Back_Templates.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCompanies.lsml.js">
+      <DependentUpon>BrowseCompanies.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCompany_Banks.lsml.js">
+      <DependentUpon>BrowseCompany_Banks.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCompany_branches.lsml.js">
+      <DependentUpon>BrowseCompany_branches.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCompany_Timetables.lsml.js">
+      <DependentUpon>BrowseCompany_Timetables.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCounters.lsml.js">
+      <DependentUpon>BrowseCounters.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCustomers.lsml.js">
+      <DependentUpon>BrowseCustomers.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCustomer_Promotes.lsml.js">
+      <DependentUpon>BrowseCustomer_Promotes.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseCustomer_Subscriptions.lsml.js">
+      <DependentUpon>BrowseCustomer_Subscriptions.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEmployeeIncentiveByFilter.lsml.js">
+      <DependentUpon>BrowseEmployeeIncentiveByFilter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEmployees.lsml.js">
+      <DependentUpon>BrowseEmployees.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEmployee_Time_Markers.lsml.js">
+      <DependentUpon>BrowseEmployee_Time_Markers.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEmployes_Timetables.lsml.js">
+      <DependentUpon>BrowseEmployes_Timetables.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEventByDate.lsml.js">
+      <DependentUpon>BrowseEventByDate.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseFidelity_Cards.lsml.js">
+      <DependentUpon>BrowseFidelity_Cards.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseFirst_note.lsml.js">
+      <DependentUpon>BrowseFirst_note.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseGeo_Cities.lsml.js">
+      <DependentUpon>BrowseGeo_Cities.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseGeo_Countries.lsml.js">
+      <DependentUpon>BrowseGeo_Countries.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseGeo_Regions.lsml.js">
+      <DependentUpon>BrowseGeo_Regions.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseInventory.lsml.js">
+      <DependentUpon>BrowseInventory.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseMessagings.lsml.js">
+      <DependentUpon>BrowseMessagings.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseOffersByService.lsml.js">
+      <DependentUpon>BrowseOffersByService.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseOffers_Detail_by_Name.lsml.js">
+      <DependentUpon>BrowseOffers_Detail_by_Name.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseOrder_By_Date.lsml.js">
+      <DependentUpon>BrowseOrder_By_Date.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseOrder_item_By_Filter.lsml.js">
+      <DependentUpon>BrowseOrder_item_By_Filter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowsePhotoByCustomer.lsml.js">
+      <DependentUpon>BrowsePhotoByCustomer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct.lsml.js">
+      <DependentUpon>BrowseProduct.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct_Brands.lsml.js">
+      <DependentUpon>BrowseProduct_Brands.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct_Category.lsml.js">
+      <DependentUpon>BrowseProduct_Category.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct_Colors.lsml.js">
+      <DependentUpon>BrowseProduct_Colors.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct_Offers.lsml.js">
+      <DependentUpon>BrowseProduct_Offers.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseProduct_Taxes.lsml.js">
+      <DependentUpon>BrowseProduct_Taxes.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseRooms.lsml.js">
+      <DependentUpon>BrowseRooms.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseSalonBook.lsml.js">
+      <DependentUpon>BrowseSalonBook.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseSchedule.lsml.js">
+      <DependentUpon>BrowseSchedule.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseSchedule_by_date.lsml.js">
+      <DependentUpon>BrowseSchedule_by_date.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseSectors.lsml.js">
+      <DependentUpon>BrowseSectors.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseServiceByCategory.lsml.js">
+      <DependentUpon>BrowseServiceByCategory.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseServiceByEmployee.lsml.js">
+      <DependentUpon>BrowseServiceByEmployee.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Customer_newClient.lsml.js">
+      <DependentUpon>BrowseStatist_Customer_newClient.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Customer_Segmentation.lsml.js">
+      <DependentUpon>BrowseStatist_Customer_Segmentation.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Customer_Visit.lsml.js">
+      <DependentUpon>BrowseStatist_Customer_Visit.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Employee_Commission.lsml.js">
+      <DependentUpon>BrowseStatist_Employee_Commission.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Product_On_Sell.lsml.js">
+      <DependentUpon>BrowseStatist_Product_On_Sell.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Sell_By_Category.lsml.js">
+      <DependentUpon>BrowseStatist_Sell_By_Category.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Sell_By_Employee.lsml.js">
+      <DependentUpon>BrowseStatist_Sell_By_Employee.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Sell_By_Hour.lsml.js">
+      <DependentUpon>BrowseStatist_Sell_By_Hour.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Sell_By_Service.lsml.js">
+      <DependentUpon>BrowseStatist_Sell_By_Service.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Sell_By_Year.lsml.js">
+      <DependentUpon>BrowseStatist_Sell_By_Year.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseStatist_Top10Products.lsml.js">
+      <DependentUpon>BrowseStatist_Top10Products.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseSuppliers.lsml.js">
+      <DependentUpon>BrowseSuppliers.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseTopTenCustomer.lsml.js">
+      <DependentUpon>BrowseTopTenCustomer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseTopTenEmployee.lsml.js">
+      <DependentUpon>BrowseTopTenEmployee.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseUnder_Guard.lsml.js">
+      <DependentUpon>BrowseUnder_Guard.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseWorkSpaces.lsml.js">
+      <DependentUpon>BrowseWorkSpaces.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Chart_OrdersByEmployee_Top10.lsml.js">
+      <DependentUpon>Chart_OrdersByEmployee_Top10.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Chart_Order_By_Year.lsml.js">
+      <DependentUpon>Chart_Order_By_Year.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Chart_TopTenCustomer.lsml.js">
+      <DependentUpon>Chart_TopTenCustomer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Grid_AccountByNameGrid.lsml.js">
+      <DependentUpon>Grid_AccountByNameGrid.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Grid_Cash_Operation.lsml.js">
+      <DependentUpon>Grid_Cash_Operation.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Grid_Employee_Time_Marker_by_Filter.lsml.js">
+      <DependentUpon>Grid_Employee_Time_Marker_by_Filter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Grid_First_Note_Grouping.lsml.js">
+      <DependentUpon>Grid_First_Note_Grouping.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Grid_Order_item_By_Filter.lsml.js">
+      <DependentUpon>Grid_Order_item_By_Filter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home.lsml.js">
+      <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Administration.lsml.js">
+      <DependentUpon>Home_Administration.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Appointment.lsml.js">
+      <DependentUpon>Home_Appointment.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Cash.lsml.js">
+      <DependentUpon>Home_Cash.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Configurazione.lsml.js">
+      <DependentUpon>Home_Configurazione.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Customer.lsml.js">
+      <DependentUpon>Home_Customer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Human_Resource.lsml.js">
+      <DependentUpon>Home_Human_Resource.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Marketing.lsml.js">
+      <DependentUpon>Home_Marketing.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Statistics.lsml.js">
+      <DependentUpon>Home_Statistics.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home_Storehouse.lsml.js">
+      <DependentUpon>Home_Storehouse.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Navigator.lsml.js">
+      <DependentUpon>Navigator.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrdersReportViewerTemplate.lsml.js">
+      <DependentUpon>OrdersReportViewerTemplate.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Order_By_DateGridGrouping.lsml.js">
+      <DependentUpon>Order_By_DateGridGrouping.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Parameters\ViewParameter.lsml.js">
+      <DependentUpon>ViewParameter.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ScheduleSet\AddEditAppointment.lsml.js">
+      <DependentUpon>AddEditAppointment.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ScheduleSet\AddEditSchedule1.lsml.js">
+      <DependentUpon>AddEditSchedule1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ScheduleSet\ViewSchedule1.lsml.js">
+      <DependentUpon>ViewSchedule1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewAppointment.lsml.js">
+      <DependentUpon>ViewAppointment.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewComunication.lsml.js">
+      <DependentUpon>ViewComunication.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewCustomer.lsml.js">
+      <DependentUpon>ViewCustomer.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewCustomer_Subscription.lsml.js">
+      <DependentUpon>ViewCustomer_Subscription.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewOrderRicevuta.lsml.js">
+      <DependentUpon>ViewOrderRicevuta.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewOrderRicevutaold.lsml.js">
+      <DependentUpon>ViewOrderRicevutaold.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewOrder_Item.lsml.js">
+      <DependentUpon>ViewOrder_Item.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\VW_SellByPassagesChartTemplate.lsml.js">
+      <DependentUpon>VW_SellByPassagesChartTemplate.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\clippy.min.js" />
+    <Content Include="Scripts\datajs-1.1.0.js" />
+    <Content Include="Scripts\datajs-1.1.0.min.js" />
+    <Content Include="Scripts\ej\ej.accordion.min.js" />
+    <Content Include="Scripts\ej\ej.captcha.min.js" />
+    <Content Include="Scripts\ej\ej.core.min.js" />
+    <Content Include="Scripts\ej\ej.data.min.js" />
+    <Content Include="Scripts\ej\ej.draggable.min.js" />
+    <Content Include="Scripts\ej\ej.editor.min.js" />
+    <Content Include="Scripts\ej\ej.excelfilter.min.js" />
+    <Content Include="Scripts\ej\ej.radialmenubase.min.js" />
+    <Content Include="Scripts\ej\ej.schedule.min.js" />
+    <Content Include="Scripts\ej\ej.scrollbar.min.js" />
+    <Content Include="Scripts\ej\ej.scroller.min.js" />
+    <Content Include="Scripts\ej\ej.spreadsheet.min.js" />
+    <Content Include="Scripts\ej\ej.tab.min.js" />
+    <Content Include="Scripts\ej\ej.touch.min.js" />
+    <Content Include="Scripts\ej\ej.unobtrusive.min.js" />
+    <Content Include="Scripts\ej\ej.web.all.min.js" />
+    <Content Include="Scripts\ej\ej.webform.min.js" />
+    <Content Include="Scripts\ej\ej.widget.angular.min.js" />
+    <Content Include="Scripts\ej\ej.widget.ko.min.js" />
+    <Content Include="Scripts\ej\globalize.culture.it-IT.min.js" />
+    <Content Include="Scripts\essebi.js" />
+    <Content Include="Scripts\datajs-1.1.3.js" />
+    <Content Include="Scripts\datajs-1.1.3.min.js" />
+    <Content Include="Scripts\globalize.culture.it-IT.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize\cultures\globalize.culture.it-IT.min.js" />
+    <Content Include="Scripts\globalize\globalize.js" />
+    <Content Include="Scripts\image-uploader-base64-encoder.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Scripts\image-uploader.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.4.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\jquery.easing-1.3.min.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.easing.1.3.min.js" />
+    <Content Include="Scripts\jquery.globalize.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.min.js" />
+    <Content Include="Scripts\jquery.qrcode.js" />
+    <Content Include="Scripts\jquery.qrcode.min.js" />
+    <Content Include="Scripts\jquery.qrcode.min.js.map" />
+    <Content Include="Scripts\jsrender.js" />
+    <Content Include="Scripts\jsrender.min.js" />
+    <Content Include="Scripts\lightswitch.bing-maps.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\msls-1.0.0-vsdoc.js" />
+    <Content Include="Scripts\msls-1.0.0.js" />
+    <Content Include="Scripts\msls-2.5.4-vsdoc.js" />
+    <Content Include="Scripts\msls-2.5.4.js" />
+    <Content Include="Scripts\msls-2.5.4.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\properties.js" />
+    <Content Include="Scripts\qrcode.js" />
+    <Content Include="Scripts\qrcode.min.js" />
+    <Content Include="Scripts\qrcode.min.js.map" />
+    <Content Include="Scripts\removeFiles.ashx" />
+    <Content Include="Scripts\saveFiles.ashx" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+    <Content Include="Scripts\WorldMap.js" />
+    <Content Include="SyncfusionAssemblyReferenceErrors.log" />
+    <Content Include="UserCode\AddEditService_Document.js" />
+    <Content Include="UserCode\Appointment.lsml.js" />
+    <Content Include="UserCode\BrowseCustomerSegmentation.js" />
+    <Content Include="UserCode\BrowseProducts.js" />
+    <Content Include="UserCode\Comunication.lsml.js" />
+    <Content Include="UserCode\Customer.lsml.js" />
+    <Content Include="UserCode\Customer_Subscription.lsml.js" />
+    <Content Include="UserCode\Customer_Subscription_Item.lsml.js" />
+    <Content Include="UserCode\Employee_Time_Marker.lsml.js" />
+    <Content Include="UserCode\Fidelity_Card.lsml.js" />
+    <Content Include="UserCode\Grid_Product.js" />
+    <Content Include="UserCode\Grid_Products.js" />
+    <Content Include="UserCode\Grid_Service_Avg_Monthly.js" />
+    <Content Include="UserCode\Order_Item.lsml.js" />
+    <Content Include="UserCode\Photo.lsml.js" />
+    <Content Include="UserCode\Product.lsml.js" />
+    <Content Include="UserCode\Product_By_TypeGridGroupingTemplate.js" />
+    <Content Include="UserCode\Product_History.lsml.js" />
+    <Content Include="UserCode\Sector.lsml.js" />
+    <Content Include="UserCode\Service_Avg_MonthlyGridGroupingTemplate.js" />
+    <Content Include="UserCode\Service_Offer.lsml.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\Server\Server.vbproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\ApplicationData\Account_Operations.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Appointments.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Parameters.lsml" />
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\Account_Operations\AddEditAccount_Operation.lsml" />
+    <LightSwitchModel Include="Screens\Account_Operations\BrowseAccount_Operations.lsml" />
+    <LightSwitchModel Include="Screens\Account_Operations\ViewAccount_Operation.lsml" />
+    <LightSwitchModel Include="Screens\AddEditAccount.lsml" />
+    <LightSwitchModel Include="Screens\AddEditAccount_Ledger.lsml" />
+    <LightSwitchModel Include="Screens\AddEditAccount_List.lsml" />
+    <LightSwitchModel Include="Screens\AddEditAgent.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCome_Back_Template.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCompany.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCompany_Bank.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCompany_branche.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCompany_Timetable.lsml" />
+    <LightSwitchModel Include="Screens\AddEditComunication.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCounter.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer_Anamnesy.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer_Preference.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer_Promote.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer_Subscription.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCustomer_Subscription_Item.lsml" />
+    <LightSwitchModel Include="Screens\AddEditEmployee.lsml" />
+    <LightSwitchModel Include="Screens\AddEditEmployee_Incentive_Plan.lsml" />
+    <LightSwitchModel Include="Screens\AddEditEmployee_Time_Marker.lsml" />
+    <LightSwitchModel Include="Screens\AddEditEmployes_Timetable.lsml" />
+    <LightSwitchModel Include="Screens\AddEditFidelity_Card.lsml" />
+    <LightSwitchModel Include="Screens\AddEditGeo_City.lsml" />
+    <LightSwitchModel Include="Screens\AddEditGeo_Country.lsml" />
+    <LightSwitchModel Include="Screens\AddEditGeo_Region.lsml" />
+    <LightSwitchModel Include="Screens\AddEditMenu.lsml" />
+    <LightSwitchModel Include="Screens\AddEditMessaging.lsml" />
+    <LightSwitchModel Include="Screens\AddEditOffers_Detail.lsml" />
+    <LightSwitchModel Include="Screens\AddEditOrder.lsml" />
+    <LightSwitchModel Include="Screens\AddEditOrder_Cart.lsml" />
+    <LightSwitchModel Include="Screens\AddEditOrder_Item.lsml" />
+    <LightSwitchModel Include="Screens\AddEditOrder_Item_Sell.lsml" />
+    <LightSwitchModel Include="Screens\AddEditPhoto.lsml" />
+    <LightSwitchModel Include="Screens\AddEditPreLoad.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Brand.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Category.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Color.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Document.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Document_Item.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_History.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Offer.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Service.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProduct_Tax.lsml" />
+    <LightSwitchModel Include="Screens\AddEditRoom.lsml" />
+    <LightSwitchModel Include="Screens\AddEditSchedule.lsml" />
+    <LightSwitchModel Include="Screens\AddEditSector.lsml" />
+    <LightSwitchModel Include="Screens\AddEditSelling.lsml" />
+    <LightSwitchModel Include="Screens\AddEditService_Offer.lsml" />
+    <LightSwitchModel Include="Screens\AddEditService_Product.lsml" />
+    <LightSwitchModel Include="Screens\AddEditService_Tipology.lsml" />
+    <LightSwitchModel Include="Screens\AddEditSupplier.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTodoList.lsml" />
+    <LightSwitchModel Include="Screens\AddEditWorkSpace.lsml" />
+    <LightSwitchModel Include="Screens\Appointment4ScheduleScheduleMultipleResourceTemplate.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAccounts.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAccount_Ledgers.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAccount_Lists.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAgentByName.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAppointment1.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAppointments.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAppointment_By_Date.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAvailableEmployees.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCash_Operation.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCome_Back_Templates.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCompanies.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCompany_Banks.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCompany_branches.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCompany_Timetables.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCounters.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCustomers.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCustomer_Promotes.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCustomer_Subscriptions.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEmployeeIncentiveByFilter.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEmployees.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEmployee_Time_Markers.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEmployes_Timetables.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEventByDate.lsml" />
+    <LightSwitchModel Include="Screens\BrowseFidelity_Cards.lsml" />
+    <LightSwitchModel Include="Screens\BrowseFirst_note.lsml" />
+    <LightSwitchModel Include="Screens\BrowseGeo_Cities.lsml" />
+    <LightSwitchModel Include="Screens\BrowseGeo_Countries.lsml" />
+    <LightSwitchModel Include="Screens\BrowseGeo_Regions.lsml" />
+    <LightSwitchModel Include="Screens\BrowseInventory.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMenues.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMessagings.lsml" />
+    <LightSwitchModel Include="Screens\BrowseOffersByService.lsml" />
+    <LightSwitchModel Include="Screens\BrowseOffers_Detail_by_Name.lsml" />
+    <LightSwitchModel Include="Screens\BrowseOrder_By_Date.lsml" />
+    <LightSwitchModel Include="Screens\BrowseOrder_item_By_Filter.lsml" />
+    <LightSwitchModel Include="Screens\BrowsePhotoByCustomer.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Brands.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Category.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Colors.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Documents.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Offers.lsml" />
+    <LightSwitchModel Include="Screens\BrowseProduct_Taxes.lsml" />
+    <LightSwitchModel Include="Screens\BrowseRooms.lsml" />
+    <LightSwitchModel Include="Screens\BrowseSalonBook.lsml" />
+    <LightSwitchModel Include="Screens\BrowseSchedule.lsml" />
+    <LightSwitchModel Include="Screens\BrowseSchedule_by_date.lsml" />
+    <LightSwitchModel Include="Screens\BrowseSectors.lsml" />
+    <LightSwitchModel Include="Screens\BrowseServiceByCategory.lsml" />
+    <LightSwitchModel Include="Screens\BrowseServiceByEmployee.lsml" />
+    <LightSwitchModel Include="Screens\BrowseService_Tipologies.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Customer_newClient.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Customer_Segmentation.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Customer_Visit.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Employee_Commission.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Product_On_Sell.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Sell_By_Category.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Sell_By_Employee.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Sell_By_Hour.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Sell_By_Service.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Sell_By_Year.lsml" />
+    <LightSwitchModel Include="Screens\BrowseStatist_Top10Products.lsml" />
+    <LightSwitchModel Include="Screens\BrowseSuppliers.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTodoLists.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTopTenCustomer.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTopTenEmployee.lsml" />
+    <LightSwitchModel Include="Screens\BrowseUnder_Guard.lsml" />
+    <LightSwitchModel Include="Screens\BrowseWorkSpaces.lsml" />
+    <LightSwitchModel Include="Screens\Chart_OrdersByEmployee_Top10.lsml" />
+    <LightSwitchModel Include="Screens\Chart_Order_By_Year.lsml" />
+    <LightSwitchModel Include="Screens\Chart_TopTenCustomer.lsml" />
+    <LightSwitchModel Include="Screens\Grid_AccountByNameGrid.lsml" />
+    <LightSwitchModel Include="Screens\Grid_Cash_Operation.lsml" />
+    <LightSwitchModel Include="Screens\Grid_Employee_Time_Marker_by_Filter.lsml" />
+    <LightSwitchModel Include="Screens\Grid_First_Note_Grouping.lsml" />
+    <LightSwitchModel Include="Screens\Grid_Order_item_By_Filter.lsml" />
+    <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\Home_Administration.lsml" />
+    <LightSwitchModel Include="Screens\Home_Appointment.lsml" />
+    <LightSwitchModel Include="Screens\Home_Cash.lsml" />
+    <LightSwitchModel Include="Screens\Home_Configurazione.lsml" />
+    <LightSwitchModel Include="Screens\Home_Customer.lsml" />
+    <LightSwitchModel Include="Screens\Home_Human_Resource.lsml" />
+    <LightSwitchModel Include="Screens\Home_Marketing.lsml" />
+    <LightSwitchModel Include="Screens\Home_Statistics.lsml" />
+    <LightSwitchModel Include="Screens\Home_Storehouse.lsml" />
+    <LightSwitchModel Include="Screens\Navigator.lsml" />
+    <LightSwitchModel Include="Screens\OrdersReportViewerTemplate.lsml" />
+    <LightSwitchModel Include="Screens\Order_By_DateGridGrouping.lsml" />
+    <LightSwitchModel Include="Screens\Parameters\AddEditParameter.lsml" />
+    <LightSwitchModel Include="Screens\Parameters\BrowseParameters.lsml" />
+    <LightSwitchModel Include="Screens\Parameters\ViewParameter.lsml" />
+    <LightSwitchModel Include="Screens\ScheduleSet\AddEditAppointment.lsml" />
+    <LightSwitchModel Include="Screens\ScheduleSet\AddEditSchedule1.lsml" />
+    <LightSwitchModel Include="Screens\ScheduleSet\BrowseSchedule1.lsml" />
+    <LightSwitchModel Include="Screens\ScheduleSet\ViewSchedule1.lsml" />
+    <LightSwitchModel Include="Screens\ViewAppointment.lsml" />
+    <LightSwitchModel Include="Screens\ViewComunication.lsml" />
+    <LightSwitchModel Include="Screens\ViewCustomer.lsml" />
+    <LightSwitchModel Include="Screens\ViewCustomer_Anamnesy.lsml" />
+    <LightSwitchModel Include="Screens\ViewCustomer_Preference.lsml" />
+    <LightSwitchModel Include="Screens\ViewCustomer_Promote.lsml" />
+    <LightSwitchModel Include="Screens\ViewCustomer_Subscription.lsml" />
+    <LightSwitchModel Include="Screens\ViewFidelity_Card.lsml" />
+    <LightSwitchModel Include="Screens\ViewOrder.lsml" />
+    <LightSwitchModel Include="Screens\ViewOrderRicevuta.lsml" />
+    <LightSwitchModel Include="Screens\ViewOrderRicevutaold.lsml" />
+    <LightSwitchModel Include="Screens\ViewOrder_Item.lsml" />
+    <LightSwitchModel Include="Screens\ViewPhoto.lsml" />
+    <LightSwitchModel Include="Screens\ViewProduct_Document.lsml" />
+    <LightSwitchModel Include="Screens\ViewService_Document.lsml" />
+    <LightSwitchModel Include="Screens\VW_SellByPassagesChartTemplate.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

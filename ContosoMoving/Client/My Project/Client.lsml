@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication"
+  TargetPlatform="RichClient"
+  Logo="Microsoft.LightSwitch.UserImageResources::Resources\logo salon coach.png"
+  Version="1.0.0.0"
+  DefaultNavigationItem="!module/NavigationItems[Tasks]"
+  Shell="Microsoft.LightSwitch.RichClient:Standard"
+  Theme="Microsoft.LightSwitch.RichClient:Blue" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <ModuleNamespace
+      Namespace="LightSwitchApplication" />
+    <Partial
+      IsPrimary="True" />
+  </Application.Attributes>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="ApplicationData"
+      EntityContainer="ApplicationData" />
+  </EntityContainerGroup>
+  <GlobalAttributeGroup>
+    <GlobalAttributeGroup.Attributes>
+      <Proxy
+        Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:Writer" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:Reader" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:Editor" />
+    </Permission.Attributes>
+  </Permission>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowHome"
+      Target="!module/Methods[ShowHome]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchCustomers"
+      Target="!module/Methods[ShowSearchCustomers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchEmployees"
+      Target="!module/Methods[ShowSearchEmployees]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewAppointment"
+      Target="!module/Methods[ShowCreateNewAppointment]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewCustomer"
+      Target="!module/Methods[ShowCreateNewCustomer]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewEmployee"
+      Target="!module/Methods[ShowCreateNewEmployee]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateSampleData"
+      Target="!module/Methods[ShowCreateSampleData]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Brands"
+      Target="!module/Methods[ShowList_Brands]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Categories"
+      Target="!module/Methods[ShowList_Categories]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Colors"
+      Target="!module/Methods[ShowList_Colors]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Offers"
+      Target="!module/Methods[ShowList_Offers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Taxes"
+      Target="!module/Methods[ShowList_Taxes]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Menues"
+      Target="!module/Methods[ShowList_Menues]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Account_Ledgers"
+      Target="!module/Methods[ShowList_Account_Ledgers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Counters"
+      Target="!module/Methods[ShowList_Counters]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Companies"
+      Target="!module/Methods[ShowList_Companies]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Suppliers"
+      Target="!module/Methods[ShowList_Suppliers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Accounts"
+      Target="!module/Methods[ShowList_Accounts]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Account_Operations"
+      Target="!module/Methods[ShowList_Account_Operations]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Account_Lists"
+      Target="!module/Methods[ShowList_Account_Lists]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Product_Documents"
+      Target="!module/Methods[ShowList_Product_Documents]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Agent"
+      Target="!module/Methods[ShowList_Agent]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Customers"
+      Target="!module/Methods[ShowList_Customers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Services"
+      Target="!module/Methods[ShowList_Services]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_City"
+      Target="!module/Methods[ShowList_City]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Calendar_Events"
+      Target="!module/Methods[ShowList_Calendar_Events]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Region"
+      Target="!module/Methods[ShowList_Region]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowStart"
+      Target="!module/Methods[ShowStart]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Product"
+      Target="!module/Methods[ShowList_Product]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Product_Inventory"
+      Target="!module/Methods[ShowList_Product_Inventory]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Product_Under_Stock"
+      Target="!module/Methods[ShowList_Product_Under_Stock]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowDetail_Product_Tax"
+      Target="!module/Methods[ShowDetail_Product_Tax]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowDetail_Product_Brand"
+      Target="!module/Methods[ShowDetail_Product_Brand]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchProducts"
+      Target="!module/Methods[ShowSearchProducts]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Messagings"
+      Target="!module/Methods[ShowList_Messagings]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewProduct_Brand"
+      Target="!module/Methods[ShowCreateNewProduct_Brand]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewProduct_Category"
+      Target="!module/Methods[ShowCreateNewProduct_Category]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewSupplier"
+      Target="!module/Methods[ShowCreateNewSupplier]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewProduct"
+      Target="!module/Methods[ShowCreateNewProduct]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewProduct_Document"
+      Target="!module/Methods[ShowCreateNewProduct_Document]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalyzeService_Histories"
+      Target="!module/Methods[ShowAnalyzeService_Histories]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalyzeTop_Ten"
+      Target="!module/Methods[ShowAnalyzeTop_Ten]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowPdfViewerScreen"
+      Target="!module/Methods[ShowPdfViewerScreen]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchSchedules_old"
+      Target="!module/Methods[ShowSearchSchedules_old]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNew_Service"
+      Target="!module/Methods[ShowCreateNew_Service]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Configuration"
+      Target="!module/Methods[ShowHome_Configuration]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Company_Banks"
+      Target="!module/Methods[ShowList_Company_Banks]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Employes_Timetable"
+      Target="!module/Methods[ShowList_Employes_Timetable]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Employees"
+      Target="!module/Methods[ShowList_Employees]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Companies_branch"
+      Target="!module/Methods[ShowList_Companies_branch]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Employees_Incentive"
+      Target="!module/Methods[ShowList_Employees_Incentive]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Inventory"
+      Target="!module/Methods[ShowHome_Inventory]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Service_Offers"
+      Target="!module/Methods[ShowList_Service_Offers]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Customer"
+      Target="!module/Methods[ShowHome_Customer]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Photos"
+      Target="!module/Methods[ShowList_Photos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowStatist_Service_Histories"
+      Target="!module/Methods[ShowStatist_Service_Histories]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowStatist_TopTenCustomer"
+      Target="!module/Methods[ShowStatist_TopTenCustomer]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewService_Document"
+      Target="!module/Methods[ShowCreateNewService_Document]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Service_Document"
+      Target="!module/Methods[ShowList_Service_Document]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Customer_Promotes"
+      Target="!module/Methods[ShowList_Customer_Promotes]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Appointement"
+      Target="!module/Methods[ShowHome_Appointement]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_TodoLists"
+      Target="!module/Methods[ShowList_TodoLists]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchAvailableEmployees"
+      Target="!module/Methods[ShowSearchAvailableEmployees]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchUpcomingAppointments"
+      Target="!module/Methods[ShowSearchUpcomingAppointments]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNew_Treatment"
+      Target="!module/Methods[ShowCreateNew_Treatment]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Treatment"
+      Target="!module/Methods[ShowList_Treatment]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowListDetail_Services"
+      Target="!module/Methods[ShowListDetail_Services]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Finance"
+      Target="!module/Methods[ShowHome_Finance]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearch_Account_Cash_Operation"
+      Target="!module/Methods[ShowSearch_Account_Cash_Operation]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearch_Cash_Operation"
+      Target="!module/Methods[ShowSearch_Cash_Operation]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearch_First_note"
+      Target="!module/Methods[ShowSearch_First_note]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearch_Schedule_by_date"
+      Target="!module/Methods[ShowSearch_Schedule_by_date]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearch_OverHead_By_Year"
+      Target="!module/Methods[ShowSearch_OverHead_By_Year]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewAccount_List"
+      Target="!module/Methods[ShowCreateNewAccount_List]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalyze_SalonBalance1"
+      Target="!module/Methods[ShowAnalyze_SalonBalance1]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchService_Histories"
+      Target="!module/Methods[ShowSearchService_Histories]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalisysService_Avg_Monthly"
+      Target="!module/Methods[ShowAnalisysService_Avg_Monthly]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalisys_Sell_Mountly"
+      Target="!module/Methods[ShowAnalisys_Sell_Mountly]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowList_Statists"
+      Target="!module/Methods[ShowList_Statists]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome_Statist"
+      Target="!module/Methods[ShowHome_Statist]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAnalyze_Statists"
+      Target="!module/Methods[ShowAnalyze_Statists]" />
+  </Application.Commands>
+  <Application.NavigationItems>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Clienti" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowSearchCustomers]" />
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowCreateNewCustomer]" />
+      <ApplicationNavigationLink
+        Name="link18"
+        Command="!module/Commands[ScreenCommandShowList_Services]" />
+      <ApplicationNavigationLink
+        Name="link26"
+        Command="!module/Commands[ScreenCommandShowList_Photos]" />
+      <ApplicationNavigationLink
+        Name="link30"
+        Command="!module/Commands[ScreenCommandShowList_Customer_Promotes]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Appuntamenti" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link7"
+        Command="!module/Commands[ScreenCommandShowCreateNewAppointment]" />
+      <ApplicationNavigationLink
+        Name="link16"
+        Command="!module/Commands[ScreenCommandShowList_Calendar_Events]" />
+      <ApplicationNavigationLink
+        Name="link31"
+        Command="!module/Commands[ScreenCommandShowHome_Appointement]" />
+      <ApplicationNavigationLink
+        Name="link29"
+        Command="!module/Commands[ScreenCommandShowList_Service_Document]" />
+      <ApplicationNavigationLink
+        Name="link32"
+        Command="!module/Commands[ScreenCommandShowList_Treatment]" />
+      <ApplicationNavigationLink
+        Name="link23"
+        Command="!module/Commands[ScreenCommandShowList_TodoLists]" />
+      <ApplicationNavigationLink
+        Name="link33"
+        Command="!module/Commands[ScreenCommandShowSearchAvailableEmployees]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group3">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Operazioni Cassa" />
+      </ApplicationNavigationGroup.Attributes>
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group4">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Magazzino" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link22"
+        Command="!module/Commands[ScreenCommandShowSearchProducts]" />
+      <ApplicationNavigationLink
+        Name="link20"
+        Command="!module/Commands[ScreenCommandShowList_Product]" />
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowList_Brands]" />
+      <ApplicationNavigationLink
+        Name="link5"
+        Command="!module/Commands[ScreenCommandShowList_Categories]" />
+      <ApplicationNavigationLink
+        Name="link6"
+        Command="!module/Commands[ScreenCommandShowList_Colors]" />
+      <ApplicationNavigationLink
+        Name="link9"
+        Command="!module/Commands[ScreenCommandShowList_Offers]" />
+      <ApplicationNavigationLink
+        Name="link10"
+        Command="!module/Commands[ScreenCommandShowList_Taxes]" />
+      <ApplicationNavigationLink
+        Name="link13"
+        Command="!module/Commands[ScreenCommandShowList_Suppliers]" />
+      <ApplicationNavigationLink
+        Name="link19"
+        Command="!module/Commands[ScreenCommandShowList_Product_Documents]" />
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowList_Product_Inventory]" />
+      <ApplicationNavigationLink
+        Name="link21"
+        Command="!module/Commands[ScreenCommandShowList_Product_Under_Stock]" />
+      <ApplicationNavigationLink
+        Name="link24"
+        Command="!module/Commands[ScreenCommandShowHome_Inventory]" />
+      <ApplicationNavigationLink
+        Name="link25"
+        Command="!module/Commands[ScreenCommandShowList_Service_Offers]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="Administration">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Amministrazione" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link8"
+        Command="!module/Commands[ScreenCommandShowList_Account_Lists]" />
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowList_Account_Operations]" />
+      <ApplicationNavigationLink
+        Name="link11"
+        Command="!module/Commands[ScreenCommandShowList_Account_Ledgers]" />
+      <ApplicationNavigationLink
+        Name="link14"
+        Command="!module/Commands[ScreenCommandShowList_Accounts]" />
+      <ApplicationNavigationLink
+        Name="SearchSchedules_old"
+        Command="!module/Commands[ScreenCommandShowSearchSchedules_old]" />
+      <ApplicationNavigationLink
+        Name="RolesScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]" />
+      <ApplicationNavigationLink
+        Name="UsersScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+      <ApplicationNavigationLink
+        Name="link34"
+        Command="!module/Commands[ScreenCommandShowSearch_Account_Cash_Operation]" />
+      <ApplicationNavigationLink
+        Name="link35"
+        Command="!module/Commands[ScreenCommandShowSearch_Cash_Operation]" />
+      <ApplicationNavigationLink
+        Name="link36"
+        Command="!module/Commands[ScreenCommandShowSearch_First_note]" />
+      <ApplicationNavigationLink
+        Name="link37"
+        Command="!module/Commands[ScreenCommandShowSearch_Schedule_by_date]" />
+      <ApplicationNavigationLink
+        Name="link38"
+        Command="!module/Commands[ScreenCommandShowSearch_OverHead_By_Year]" />
+      <ApplicationNavigationLink
+        Name="link39"
+        Command="!module/Commands[ScreenCommandShowAnalyze_SalonBalance1]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group5">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Statistiche" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link12"
+        Command="!module/Commands[ScreenCommandShowAnalyzeService_Histories]" />
+      <ApplicationNavigationLink
+        Name="link17"
+        Command="!module/Commands[ScreenCommandShowAnalyzeTop_Ten]" />
+      <ApplicationNavigationLink
+        Name="link27"
+        Command="!module/Commands[ScreenCommandShowStatist_Service_Histories]" />
+      <ApplicationNavigationLink
+        Name="link28"
+        Command="!module/Commands[ScreenCommandShowStatist_TopTenCustomer]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[Start]">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Configurazione" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="Start"
+        Command="!module/Commands[ScreenCommandShowStart]" />
+      <ApplicationNavigationLink
+        Name="List_Companies"
+        Command="!module/Commands[ScreenCommandShowList_Companies]" />
+      <ApplicationNavigationLink
+        Name="List_Counters"
+        Command="!module/Commands[ScreenCommandShowList_Counters]" />
+      <ApplicationNavigationLink
+        Name="List_Agent"
+        Command="!module/Commands[ScreenCommandShowList_Agent]" />
+      <ApplicationNavigationLink
+        Name="List_Region"
+        Command="!module/Commands[ScreenCommandShowList_Region]" />
+      <ApplicationNavigationLink
+        Name="List_Messagings"
+        Command="!module/Commands[ScreenCommandShowList_Messagings]" />
+      <ApplicationNavigationLink
+        Name="Home_Configuration"
+        Command="!module/Commands[ScreenCommandShowHome_Configuration]" />
+      <ApplicationNavigationLink
+        Name="List_Company_Banks"
+        Command="!module/Commands[ScreenCommandShowList_Company_Banks]" />
+      <ApplicationNavigationLink
+        Name="List_Employes_Timetable"
+        Command="!module/Commands[ScreenCommandShowList_Employes_Timetable]" />
+      <ApplicationNavigationLink
+        Name="List_Employees"
+        Command="!module/Commands[ScreenCommandShowList_Employees]" />
+      <ApplicationNavigationLink
+        Name="List_Companies_branch"
+        Command="!module/Commands[ScreenCommandShowList_Companies_branch]" />
+      <ApplicationNavigationLink
+        Name="List_Employees_Incentive"
+        Command="!module/Commands[ScreenCommandShowList_Employees_Incentive]" />
+      <ApplicationNavigationLink
+        Name="SearchService_Histories"
+        Command="!module/Commands[ScreenCommandShowSearchService_Histories]" />
+      <ApplicationNavigationLink
+        Name="AnalisysService_Avg_Monthly"
+        Command="!module/Commands[ScreenCommandShowAnalisysService_Avg_Monthly]" />
+      <ApplicationNavigationLink
+        Name="Analisys_Sell_Mountly"
+        Command="!module/Commands[ScreenCommandShowAnalisys_Sell_Mountly]" />
+      <ApplicationNavigationLink
+        Name="List_Statists"
+        Command="!module/Commands[ScreenCommandShowList_Statists]" />
+      <ApplicationNavigationLink
+        Name="Home_Statist"
+        Command="!module/Commands[ScreenCommandShowHome_Statist]" />
+      <ApplicationNavigationLink
+        Name="Analyze_Statists"
+        Command="!module/Commands[ScreenCommandShowAnalyze_Statists]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group6">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Utilità" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link15"
+        Command="!module/Commands[ScreenCommandShowCreateSampleData]" />
+    </ApplicationNavigationGroup>
+  </Application.NavigationItems>
+</Application>

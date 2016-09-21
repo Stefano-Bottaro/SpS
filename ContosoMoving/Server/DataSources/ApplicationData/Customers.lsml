@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Customer">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Clienti" />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Summary"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Nominativo" />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Cognome" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FirstName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Nome" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Code"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="13" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BarCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="13" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Picture"
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Foto" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Attachment"
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Sex"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="1" />
+          <DisplayName
+            Value="Genere" />
+          <SupportedValue
+            DisplayName="Femminile"
+            Value="F" />
+          <SupportedValue
+            DisplayName="Maschile"
+            Value="M" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Profession"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <DisplayName
+            Value="Professione" />
+          <SupportedValue
+            Value="Casalinga" />
+          <SupportedValue
+            Value="Dipendente" />
+          <SupportedValue
+            Value="Consulente" />
+          <SupportedValue
+            Value="Imprenditore" />
+          <SupportedValue
+            Value="Professionista" />
+          <SupportedValue
+            Value="Studente" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Contact_Method"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Contatto" />
+          <SupportedValue
+            Value="Sms" />
+          <SupportedValue
+            Value="Mail" />
+          <SupportedValue
+            Value="Mail/Sms" />
+          <SupportedValue
+            Value="Telefono" />
+          <SupportedValue
+            Value="Cellulare" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Street"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StreetLine2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo secondario" />
+          <NotSearchable />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Phone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="16" />
+          <DisplayName
+            Value="Telefono" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Email"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="E-mail" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Twitter_Address"
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo Twitter" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FaceBook_Address"
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo FaceBook" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LinkedIn_Address"
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo Linked In" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Città" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Geo_City"
+        Association="Customer_Geo_City"
+        FromEnd="Customer"
+        ToEnd="Geo_City">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Comune" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Cap" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Scheda_Tecnica"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="1000" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Discount"
+        PropertyType="Microsoft.LightSwitch.Extensions:Percent?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="5"
+            Scale="2" />
+          <DisplayName
+            Value="Sconto" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
+            <Property
+              Name="DecimalDigits"
+              Value="0" />
+          </Attribute>
+          <Range
+            Minimum="0" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Privacy"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+          <SupportedValue
+            DisplayName="Si"
+            Value="True" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Payment_Type"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Pagamento" />
+          <SupportedValue
+            Value="Contanti" />
+          <SupportedValue
+            Value="Rimessa Diretta" />
+          <SupportedValue
+            Value="Altro" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deferrals"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Dilazioni" />
+          <SupportedValue
+            Value="0" />
+          <SupportedValue
+            Value="15" />
+          <SupportedValue
+            Value="30" />
+          <SupportedValue
+            Value="60" />
+          <SupportedValue
+            Value="90" />
+          <Range
+            Minimum="0" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Payment_Number"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Nr. Rate" />
+          <SupportedValue
+            Value="1" />
+          <SupportedValue
+            Value="2" />
+          <SupportedValue
+            Value="3" />
+          <Range
+            Minimum="1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Last_Visit"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Ultima Visita" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Visit_Number"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Numero Visite" />
+          <Hidden />
+          <Range
+            Minimum="" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Frequency"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <DisplayName
+            Value="Frequenza mensile" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Average_Expense"
+        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
+            <Property
+              Name="CurrencySymbol"
+              Value="€" />
+          </Attribute>
+          <Hidden />
+          <DisplayName
+            Value="Spesa media" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Expense_Last_Year"
+        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <DisplayName
+            Value="Spesa Ultimo Anno" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
+            <Property
+              Name="CurrencySymbol"
+              Value="€" />
+          </Attribute>
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Expense"
+        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <DisplayName
+            Value="Spesa totale" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
+            <Property
+              Name="CurrencySymbol"
+              Value="€" />
+          </Attribute>
+          <Range
+            Minimum="0" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Point"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Punti Accumulati" />
+          <Range
+            Minimum="0" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Appointments"
+        Association="Appointment_Customer"
+        FromEnd="Customer"
+        ToEnd="Appointment">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Appuntamenti" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Customer_PreferenceCollection"
+        Association="Customer_Preference_Customer"
+        FromEnd="Customer"
+        ToEnd="Customer_Preference">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Preferenze" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Customer_Anamnesies"
+        Association="Customer_Anamnesy_Customer"
+        FromEnd="Customer"
+        ToEnd="Customer_Anamnesy">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Allergie e Patologie" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Customer_Promotes"
+        Association="Customer_Promote_Customer"
+        FromEnd="Customer"
+        ToEnd="Customer_Promote">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Promozioni" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Customer_Subscriptions"
+        Association="Customer_Subscription_Customer"
+        FromEnd="Customer"
+        ToEnd="Customer_Subscription">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Abbonamenti" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="Age"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Età" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Born_date"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DisplayName
+            Value="Data di nascita" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Born_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <DisplayName
+            Value="Comune di Nascita" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Longitude"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <Hidden />
+          <DisplayName
+            Value="Longitudine" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Latitude"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <Hidden />
+          <DisplayName
+            Value="Latitudine" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Order"
+        Association="Order_Customer"
+        FromEnd="Customer"
+        ToEnd="Order">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Diario trattamenti" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="created"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="15" />
+          <DisplayName
+            Value="Categoria" />
+          <SupportedValue
+            Value="Platino" />
+          <SupportedValue
+            Value="Oro" />
+          <SupportedValue
+            Value="Argento" />
+          <SupportedValue
+            Value="Bronzo" />
+          <SupportedValue
+            Value="Ferro" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Come_BackCollection"
+        Association="Come_Back_Customer"
+        FromEnd="Customer"
+        ToEnd="Come_Back" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="Appointment_Customer">
+    <AssociationEnd
+      Name="Appointment"
+      Multiplicity="Many"
+      EntityType="Appointment" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Customer_Preference_Customer">
+    <AssociationEnd
+      Name="Customer_Preference"
+      Multiplicity="Many"
+      EntityType="Customer_Preference" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Customer_Anamnesy_Customer">
+    <AssociationEnd
+      Name="Customer_Anamnesy"
+      Multiplicity="Many"
+      EntityType="Customer_Anamnesy" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Customer_Promote_Customer">
+    <AssociationEnd
+      Name="Customer_Promote"
+      Multiplicity="Many"
+      EntityType="Customer_Promote" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Customer_Subscription_Customer">
+    <AssociationEnd
+      Name="Customer_Subscription"
+      Multiplicity="Many"
+      EntityType="Customer_Subscription" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Order_Customer">
+    <AssociationEnd
+      Name="Order"
+      Multiplicity="Many"
+      EntityType="Order" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Come_Back_Customer">
+    <AssociationEnd
+      Name="Come_Back"
+      Multiplicity="Many"
+      EntityType="Come_Back" />
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Customers"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Customer" />
+    <QueryOperation
+      Name="Customers_Single"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Customers_SingleOrDefault"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Appointment_Customers"
+      Association="Appointment_Customer">
+      <AssociationSetEnd
+        Name="Appointment"
+        EntitySet="Appointments" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Customer_Preference_CustomerSet"
+      Association="Customer_Preference_Customer">
+      <AssociationSetEnd
+        Name="Customer_Preference"
+        EntitySet="Customer_Preferences" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Customer_Anamnesy_CustomerSet"
+      Association="Customer_Anamnesy_Customer">
+      <AssociationSetEnd
+        Name="Customer_Anamnesy"
+        EntitySet="Customer_Anamnesies" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Customer_Promote_CustomerSet"
+      Association="Customer_Promote_Customer">
+      <AssociationSetEnd
+        Name="Customer_Promote"
+        EntitySet="Customer_Promotes" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Customer_Subscription_CustomerSet"
+      Association="Customer_Subscription_Customer">
+      <AssociationSetEnd
+        Name="Customer_Subscription"
+        EntitySet="Customer_Subscriptions" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Order_CustomerSet"
+      Association="Order_Customer">
+      <AssociationSetEnd
+        Name="Order"
+        EntitySet="Orders" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Come_Back_CustomerSet"
+      Association="Come_Back_Customer">
+      <AssociationSetEnd
+        Name="Come_Back"
+        EntitySet="Come_Backs" />
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Customers">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Fidelity_Card_Customer"
+          Nullable="True"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Customer_Geo_City"
+          Nullable="True"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Appointment_Customers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Appointment_Customers" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Appointment_Customers]/Members[Appointment]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Appointment_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Appointment_Customers]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Customer_Preference_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Customer_Preference_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Preference_CustomerSet]/Members[Customer_Preference]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Customer_Preference_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Preference_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Customer_Anamnesy_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Customer_Anamnesy_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Anamnesy_CustomerSet]/Members[Customer_Anamnesy]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Customer_Anamnesy_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Anamnesy_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Customer_Promote_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Customer_Promote_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Promote_CustomerSet]/Members[Customer_Promote]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Customer_Promote_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Promote_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Customer_Subscription_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Customer_Subscription_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Subscription_CustomerSet]/Members[Customer_Subscription]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Customer_Subscription_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_Subscription_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Order_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Service_Document_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Order_CustomerSet]/Members[Order]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Service_Document_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Order_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Come_Back_CustomerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Come_Back_CustomerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Come_Back_CustomerSet]/Members[Come_Back]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Come_Back_Customer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Come_Back_CustomerSet]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

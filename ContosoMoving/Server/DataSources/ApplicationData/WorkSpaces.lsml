@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="WorkSpace">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Sala lavoro" />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <Required />
+          <IncludeInUniqueIndex />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Note"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Company_branch"
+        Association="WorkSpace_Company_branch"
+        FromEnd="WorkSpace"
+        ToEnd="Company_branch">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Succursale" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Appointments"
+        Association="WorkSpace_Appointment"
+        FromEnd="WorkSpace"
+        ToEnd="Appointment" />
+      <NavigationProperty
+        Name="Orders"
+        Association="Order_WorkSpace"
+        FromEnd="WorkSpace"
+        ToEnd="Order" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="WorkSpace_Appointment">
+    <AssociationEnd
+      Name="WorkSpace"
+      EntityType="WorkSpace">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Appointment"
+      Multiplicity="Many"
+      EntityType="Appointment" />
+  </Association>
+  <Association
+    Name="Order_WorkSpace">
+    <AssociationEnd
+      Name="Order"
+      Multiplicity="Many"
+      EntityType="Order" />
+    <AssociationEnd
+      Name="WorkSpace"
+      Multiplicity="One"
+      EntityType="WorkSpace">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="WorkSpaces"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="WorkSpace" />
+    <QueryOperation
+      Name="WorkSpaces_Single"
+      ReturnType="WorkSpace">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="WorkSpaces" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="WorkSpaces_SingleOrDefault"
+      ReturnType="WorkSpace">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri oppure null se non esiste l'entità." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="WorkSpaces" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="WorkSpace_AppointmentSet"
+      Association="WorkSpace_Appointment">
+      <AssociationSetEnd
+        Name="WorkSpace"
+        EntitySet="WorkSpaces" />
+      <AssociationSetEnd
+        Name="Appointment"
+        EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Order_WorkSpaceSet"
+      Association="Order_WorkSpace">
+      <AssociationSetEnd
+        Name="Order"
+        EntitySet="Orders" />
+      <AssociationSetEnd
+        Name="WorkSpace"
+        EntitySet="WorkSpaces" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="WorkSpaces">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="WorkSpace_Company_branch"
+          Nullable="True"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="WorkSpace_AppointmentSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="WorkSpace_AppointmentSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[WorkSpace_AppointmentSet]/Members[WorkSpace]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[WorkSpace_AppointmentSet]/Members[Appointment]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="WorkSpace_Appointment" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Order_WorkSpaceSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Order_WorkSpaceSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Order_WorkSpaceSet]/Members[Order]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Order_WorkSpace" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Order_WorkSpaceSet]/Members[WorkSpace]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

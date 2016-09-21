@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="Home_Finance">
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="Group"
+            Kind="Group"
+            View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+            <ContentItem
+              Name="Group1"
+              Kind="Group"
+              View="Microsoft.LightSwitch.RichClient:GroupBox">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Amministrazione" />
+              </ContentItem.Attributes>
+              <ContentItem
+                Name="Group10"
+                Kind="Group"
+                View="Microsoft.LightSwitch.RichClient:TableLayout">
+                <ContentItem
+                  Name="Group12"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Movimentazioni economiche" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group13"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Prima Nota" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group14"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Spese del Salone" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group15"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Piano dei conti" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Group11"
+                Kind="Group"
+                View="Microsoft.LightSwitch.RichClient:TableLayout">
+                <ContentItem
+                  Name="Group16"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Scadenzaio Pagamenti" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group17"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Controllo ore lavorate" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group18"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Incasso sospesi" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+                <ContentItem
+                  Name="Group19"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.RichClient:TableLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Bilancio del salone" />
+                  </ContentItem.Attributes>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[BrowseOnly]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="True"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="True"
+                  ResultType=":Boolean" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[HorizontalAlignment]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="Center"
+                  ResultType=":String" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="Center"
+                  ResultType=":String" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Back"
+            Kind="Command">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Indietro" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Home_Finance/Methods[Back]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\previous.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Piano_conti" />
+      <ScreenMethod
+        Name="Salon_Costs" />
+      <ScreenMethod
+        Name="First_Note" />
+      <ScreenMethod
+        Name="Economic_movement" />
+      <ScreenMethod
+        Name="Schedule" />
+      <ScreenMethod
+        Name="Back" />
+      <ScreenMethod
+        Name="Movimentazioni_economiche" />
+      <ScreenMethod
+        Name="Calcolo_Provvigioni" />
+      <ScreenMethod
+        Name="Calcolo_incentivi" />
+      <ScreenMethod
+        Name="Bilancio_salone" />
+    </Screen.Methods>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="ShowHome_Finance">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="Home_Finance" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

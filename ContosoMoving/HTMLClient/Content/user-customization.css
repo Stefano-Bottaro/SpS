@@ -1,0 +1,800 @@
+﻿/* Replace user-splash-screen.png with your own splash screen image  
+   RGBBase #FF2A71E9 rosa chiaro= #FFB6C1  rosa= #F8E0EC    Verde chiaro= #6FC41B   verde= #00A000  arancio= #FF7900   giallo= #FFE800  (#005DFF #00C6C4 #1FBBFF=Azzurro) Viola=#C500FF 
+   
+*/ 
+#msls-id-app-loading .msls-app-loading-img {
+    background-image: url(Images/user-splash-screen.png);
+}
+/* Font families for screen and dialog headers.  Font families for content inside a screen 
+    or dialog are determined by the theme's global font family setting. */
+.msls-header .ui-title, .msls-screen-tab .ui-btn, .msls-screen-tab .ui-btn-text {
+    font-family: 'Segoe Light', 'Segoe UI Light', 'Segoe UI', 'Segoe WP Light', 'Roboto Light','Frutiger','Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Customizable font styles for screen controls */
+.msls-font-style-large {
+}
+.msls-font-style-normal {
+}
+.msls-font-style-small {
+}
+/* Uncomment the following lines if you want to use certain jQuery Mobile listview features such as 
+    count bubbles and icons inside LightSwitch lists. jQuery Mobile relies on list items using 
+    position:relative for these features.  However, this setting performs poorly on certain mobile 
+    devices (webkit based in particular) when there are large numbers of items in the list. */
+/*
+.msls-ctl-list .ui-listview > .ui-li,
+.msls-ctl-list .ui-field-contain.ui-li {
+    position: relative;
+}
+*/
+.msls-footer {
+    background-image: url(Images/logo.png);    
+    height: 70px;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+
+.msls-control-header {
+    /*background-color:#EC8F22;*/
+    background-color:#008299;
+    border-radius:5px 5px 0 0;
+    color:white;
+}
+.id-element {
+    margin-left:10px;
+}
+
+.msls-screen-tab {
+    /*background-color: #EC8F22;*/
+     background-color:#008299;
+    /*border: 1px solid #D0D0F0;*/
+    /*display: block;*/
+    float: left;
+    -ms-align-content: center;
+    -webkit-align-content: center;
+    align-content: center;
+    height: 37px;
+    width: 150px;
+    margin: 0 1px;
+    list-style: none;
+    border-top-right-radius: 7px !important;
+    border-top-left-radius: 7px !important;
+    text-decoration: none;
+    -moz-transition: all linear 0.15s;
+    -o-transition: all linear 0.15s;
+    -webkit-transition: all linear 0.15s;
+    transition: all linear 0.15s;    
+}
+.msls-screen-tab-active{
+    /*background-color: #808080; #333333 */
+    background-color: #333333; 
+    border: 1px solid #D0D0F0;  
+    /*background-image: url("Images/tab.png");*/
+    border-bottom-color: #333333  !important;
+    border-top-right-radius: 7px !important;
+    border-top-left-radius: 7px !important;
+    /*height: 40px;
+    width: 150px;
+    margin: 0 1px;
+    float: left;
+    display: block;
+    outline-style: hidden;
+    border-radius: 5px, 5px, 0, 0;
+    opacity:1.0;*/
+}
+
+
+.ForeColor_white{
+    background:rgba(0, 0, 0, 0.7); 
+    color: white; 
+    border-radius:,,2px,2px;
+}
+
+.backColor_Red {
+    /*position:absolute;*/
+    /*top:0;*/    
+    background:red;
+    color: white;
+    height: 30px;
+    width: 110px;
+    font-size:x-large;   
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center; 
+    margin:0;  
+}
+.backColor_white {     
+    background: white;
+    color: #3d3b3b;
+    height: 30px;
+    width: 110px;   
+    font-size:  large;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;       
+    margin:0;    
+}  
+.backColor_gray {     
+    background: #f1f1f1;
+    color:dimgray;
+    height: 60px;
+    width: 100%;       
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;       
+    margin:1px;    
+} 
+.fb-button {   
+    background:#3B5998;    
+    color: white; 
+    border: 1px solid #ababab;
+    width:145px;
+    height:30px;
+    border-radius:4px;
+    text-align: center;
+    background-image:url('Images/facebook.png') ;
+    background-repeat:no-repeat;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+.fb-button:hover {    
+    background:#4a6bb1;  
+    color: white;
+    background-image:url('Images/facebook.png') ;
+    background-repeat:no-repeat;
+}
+.G-button {   
+    background:#f73322;    
+    color: white; 
+    border: 1px solid #ababab;
+    width:145px;
+    height:30px;
+    border-radius:4px;
+    text-align: center;
+    background-image:url('Images/Google.png') ;
+    background-repeat:no-repeat;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+.G-button:hover {    
+    background:#F34333;  
+    color: white;
+    background-image:url('Images/Google.png') ;
+    background-repeat:no-repeat;
+}
+.essebi-button {   
+   background:#008299;    
+    color: white; 
+    border: 1px solid #ababab;
+    width:145px;
+    height:30px;
+    border-radius:4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+}
+.essebi-button:hover {    
+    background:#00A0B1;  
+    color: white;
+}
+.day-button {   
+    background:#008299;    
+    color: white; 
+    border: 1px solid #ababab;
+    width:100px;
+    height:30px;
+    border-radius:4px;   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+}
+.day-button:hover {    
+    background:#00A0B1; 
+    color: white;
+}
+
+.login-button{background:#008299;color: white;border:1px solid #ababab;width:145px;height:30px; border-radius:4px;text-align:center; text-decoration: none;display:inline-block;background-repeat:no-repeat;background-image:url("Images/14Supplier.png") ;}
+.login-button:hover {    
+    background:#00A0B1;  
+    color: white;
+    background-image:url('Images/14Supplier.png') ;
+    background-repeat:no-repeat;
+}
+.tab_title {   
+   background-color: #99C2FF;  
+}
+th {
+    color: white;
+    background-color: #3F96AD;
+}
+/*Change background color for all odd rows*/
+tr:nth-child(2n+1) {
+    background-color: #050505;
+}
+/*Change background color for all even rows*/
+tr:nth-child(2n) {
+    background-color:#191818;
+}
+tr:hover{
+    /*background:#EC8F22;*/
+     background-color:#00A0B1;
+}
+tr:active{
+    background: #008299;
+}
+
+#basicAccordion img
+        {
+            float: left;
+            height: 40px;
+            padding-right: 6px;
+        }
+
+.emp-list
+        {
+            border-bottom: 1px solid #BBBCBB;
+            margin-bottom: 9px;
+            padding-bottom: 9px;
+        }
+
+.emp-list:last-child
+            {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+.time-panel
+        {
+            float: right;
+            color: #2382C3;
+        }
+
+.headername
+        {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+
+/* Phone media query (portrait and landscape) */
+@media 
+screen and (max-width: 400px) and (orientation: portrait), 
+screen and (max-width: 640px) and (max-height: 400px) and (orientation: landscape) {
+}
+
+.backcloth {
+    background: #008299;
+    color: white;
+}
+.backcloth:hover {background: #00A0B1 }
+
+.Color-Purple {background: #8C0095}
+.Color-Purple:hover {background: #A700AE }
+.Color-DarkPurple {background: #5133AB }
+.Color-DarkPurple:hover {background: #643EBF }
+.Color-Teal {background: #008299 }
+.Color-Teal:hover {background: #00A0B1 }
+.Color-Orange {background: #D24726 }
+.Color-Orange:hover {background: #DC572E }
+.Color-Blue {background: #2672EC }
+.Color-Blue:hover {background: #2E8DEF }
+.Color-SkyBlue {background: #094AB2 }
+.Color-SkyBlue:hover {background: #0A5BC4 }
+.Color-Red {background: #AC193D }
+.Color-Red:hover {background: #BF1E4B }
+.Color-Green {background: #008A00 }
+.Color-Green:hover {background: #00A600 }
+.Color-Yellow {background: #e8be1b }
+.Color-Yellow:hover {background: #f7d240 }      
+	
+
+.menu-navigazione {
+    width: 130px;      
+    height: 130px; 
+    /*border:1px solid #BBBCBB;*/     
+    background-color:#008299;
+    background-repeat:no-repeat;    
+}
+
+.menu-configurazione {   
+    background-image:url("Images/Configurazione.png");
+}
+.menu-clienti {   
+    background-image:url("Images/Clienti.png");
+}
+.menu-appuntamenti {   
+    background-image:url("Images/Agenda.png");
+}
+.menu-risorse {   
+    background-image:url("Images/HumanResource1.png");
+}
+.menu-magazzino {   
+    background-image:url("Images/articoli.png");
+}
+.menu-comunicazione {   
+    background-image:url("Images/Comunicare.png");
+}
+.menu-amministrazione {   
+    background-image:url("Images/ledger.png");
+}
+.menu-statistiche {   
+    background-image:url("Images/Statistiche1.png");
+}
+.menu-salone {   
+    background-image:url("Images/Configuration.png");
+}
+.menu-succursali {   
+    background-image:url("Images/Branch - 03.png");
+}
+.menu-workarea {   
+    background-image:url("Images/Door.png");
+}
+.menu-settori {   
+    background-image:url("Images/settore.png");
+}
+.menu-category {   
+    background-image:url("Images/Category1.png");
+}
+.menu-lassie {   
+    background-image:url("Images/Lassie.png");
+}
+.menu-contatori {   
+    background-image:url("Images/Counter.png");
+}
+.menu-banche {   
+    background-image:url("Images/Bank.png");
+}
+.menu-comuni {   
+    background-image:url("Images/Comuni.png");
+}
+.menu-regioni {   
+    background-image:url("Images/Region.png");
+}
+.menu-orari_salone {   
+    background-image:url("Images/Orario_di_Lavoro.png");
+}
+.menu-caricamento_iniziale {   
+    background-image:url("Images/Caricamento_Iniziale.png");
+}
+.menu-aliquote_iva {   
+    background-image:url("Images/iva.png");
+}
+.menu-nazioni
+{   
+    background-image:url("Images/Globe.png");
+}
+.menu-todolist {   
+    background-image:url("Images/Cecklist.png");
+}
+.menu-room {   
+    background-image:url("Images/room.png");
+}
+.menu-turnazione {   
+    background-image:url("Images/Orario_di_Lavoro1.png");
+}
+.menu-incentive {   
+    background-image:url("Images/Incentive.png");
+}
+.menu-personalizza_messagistica {   
+    background-image:url("Images/Message-Edit.png");
+}
+.menu-anagrafica_clienti {   
+    background-image:url("Images/Clienti.png");
+}
+.menu-salonbook {   
+    background-image:url("Images/SalonBooker.png");
+}
+.menu-photo {   
+    background-image:url("Images/Photos.png");
+}
+.menu-documenti {   
+    background-image:url("Images/modulistica.png");
+}
+.menu-carta_fedelta {   
+    background-image:url("Images/Carte.png");
+}
+.menu-prepagata {   
+    background-image:url("Images/FidelityCard.png");
+}
+.menu-regalo {   
+    background-image:url("Images/regalo.png");
+}
+
+.menu-importanti {   
+    background-image:url("Images/important.png");
+}
+.menu-impegni {   
+    background-image:url("Images/CheckEmployee.png");
+}
+.menu-appuntamentigg {   
+    background-image:url("Images/Appointment.png");
+}
+.menu-storico {   
+    background-image:url("Images/Treatments.png");
+}
+.menu-andamento {   
+    background-image:url("Images/Trend1.png");
+}
+.menu-scontrino {   
+    background-image:url("Images/DataHistory1.png");
+}
+.menu-collaboratori {   
+    background-image:url("Images/Collaboratori.png");
+}
+.menu-marcatempo {   
+    background-image:url("Images/TimeTraker.png");
+}
+.menu-ferie {   
+    background-image:url("Images/Ferie.png");
+}
+.menu-incentivi_gruppo {   
+    background-image:url("Images/Incentives1.png");
+}
+.menu-calcolo_incentivi {   
+    background-image:url("Images/Incentives5.png");
+}
+.menu-topten_collaboratori {   
+    background-image:url("Images/TopTen.png");
+}
+.menu-prodotti {   
+    background-image:url("Images/articoli.png");
+}
+.menu-history {   
+    background-image:url("Images/Chiusura_Cassa.png");
+}
+.menu-categorie {   
+    background-image:url("Images/category.png");
+}
+.menu-inventario {   
+    background-image:url("Images/Inventory.png");
+}
+.menu-sotto_scorta {   
+    background-image:url("Images/Sotto_Scorta.png");
+}
+.menu-fornitori {   
+    background-image:url("Images/Suppliers1.png");
+}
+.menu-carico {   
+    background-image:url("Images/barcode2b.png");
+}
+.menu-rappresentanti {   
+    background-image:url("Images/Agenti.png");
+}
+
+.menu-fidelizzazione {   
+    background-image:url("Images/Fidelity.png");
+}
+.menu-safety {   
+    background-image:url("Images/Safety_Task_Force.png");
+}
+.menu-chiedilo {   
+    background-image:url("Images/Crm.png");
+}
+
+.menu-notifiche {   
+    background-image:url("Images/Alerting.png");
+}
+.menu-eventi {   
+    background-image:url("Images/Events.png");
+}
+.menu-newsletter {   
+    background-image:url("Images/Marketing.png");
+}
+
+.menu-cassa {   
+    background-image:url("Images/important.png");
+}
+.menu-prima_nota {   
+    background-image:url("Images/Amministrazione3.png");
+}
+.menu-operazioni_contabili {   
+    background-image:url("Images/operazioniContabili.png");
+}
+.menu-spese {   
+    background-image:url("Images/Spese.png");
+}
+.menu-piano_conti {   
+    background-image:url("Images/Amministrazione.png");
+}
+.menu-scadenze {   
+    background-image:url("Images/Scadenzario.png");
+}
+.menu-verifica_ore {   
+    background-image:url("Images/JobHours.png");
+}
+.menu-incasso {   
+    background-image:url("Images/Incasso.png");
+}
+.menu-bilancio {   
+    background-image:url("Images/Balance1.png");
+}
+
+.menu-vendita_annuale {   
+    background-image:url("Images/Statistiche.png");
+}
+.menu-vendita_servizi {   
+    background-image:url("Images/Statistiche1.png");
+}
+.menu-vendita_categoria {   
+    background-image:url("Images/Statistiche2.png");
+}
+.menu-distribuzione_oraria {   
+    background-image:url("Images/Statistiche5.png");
+}
+.menu-indicatore_variazione {   
+    background-image:url("Images/Statistiche6.png");
+}
+.menu-incidenza_prodotto {   
+    background-image:url("Images/Statistiche7.png");
+}
+.menu-indicatori_di_trend {   
+    background-image:url("Images/Statistiche8.png");
+}
+.menu-proiezione_strategie {   
+    background-image:url("Images/Statistiche3.png");
+}
+.menu-passaggi_addetto {   
+    background-image:url("Images/Export-Chart.png");
+}
+.menu-incentivi {   
+    background-image:url("Images/Incentive.png");
+}
+.menu-fichemedia{   
+    background-image:url("Images/Ticket.png");
+}
+.menu-taglio_passaggi {   
+    background-image:url("Images/Salon.png");
+}
+.menu-topten_clienti {   
+    background-image:url("Images/TopTen1.png");
+}
+.menu-topten{   
+    background-image:url("Images/TopTen.png");
+}
+.menu-segmentation{   
+    background-image:url("Images/Chart - 03.png");
+}
+.menu-frequency{   
+    background-image:url("Images/Escalator.png");
+}
+.menu-newuser{   
+    background-image:url("Images/User-New.png");
+}
+.menu-tempi_lavorazione {   
+    background-image:url("Images/Timer.png");
+}
+
+.add_new { 
+    height: auto;
+    width: auto;     
+    border:none;    
+    background-image:url("Images/Add-New.png");    
+    background-repeat:no-repeat;
+}
+.add_cart {   
+    height: 24px;
+    width: 24px;    
+    padding-bottom:1px;   
+    border:none; 
+    background-image:url('Images/Shopping.png');    
+    background-repeat:no-repeat;
+}
+.next {   
+    height:32px;
+    width: 32px;   
+    padding-bottom:1px;   
+    border:none; 
+    background-image:url('Images/Next.png');    
+    background-repeat:no-repeat;
+}
+.previous {   
+    height:32px;
+    width: 32px;       
+    padding-bottom:1px;   
+    border:none; 
+    background-image:url('Images/previous.png');    
+    background-repeat:no-repeat;
+}
+
+.order {   
+    height: 48px;
+    width: 48px;    
+    padding-bottom:1px;   
+    border:none; 
+    background-image:url('Images/Order.png');    
+    background-repeat:no-repeat;
+}
+.delete {
+    height: 24px;
+    width: 24px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/delete24.png');    
+    background-repeat:no-repeat;
+}
+.payment {
+    height: 32px;
+    width: 32px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/Payment.png');    
+    background-repeat:no-repeat;
+}
+.precious {
+    height: 10px;
+    width: 10px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/exclamation.png');    
+    background-repeat:no-repeat;
+}
+.fidelity {
+    height: 100px;
+    width: 100px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/Fidelity1.png');    
+    background-repeat:no-repeat;
+}
+.customer {
+    height: 10px;
+    width: 10px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/white-user.png');    
+    background-repeat:no-repeat;
+}
+.employee {
+    height: 10px;
+    width: 10px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/white-Barber.png');    
+    background-repeat:no-repeat;
+}
+.calendar {
+    height: 12px;
+    width: 12px;    
+    padding-bottom:1px;   
+    border:none;
+    background-image:url('Images/white-Calendar.png');    
+    background-repeat:no-repeat;
+}
+.Calendar-Day {
+    height: 32px;
+    width: 32px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Calendar-Day.png');    
+    background-repeat:no-repeat;
+}
+.Calendar-Week {
+    height: 32px;
+    width: 32px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Calendar-Week.png');    
+    background-repeat:no-repeat;
+}
+.Calendar-Month {
+    height: 32px;
+    width: 32px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Calendar-Month.png');    
+    background-repeat:no-repeat;
+}
+
+.flag-red {   
+    padding-bottom:1px;   
+    padding-left: 25px;
+    border:thin;
+    background-image:url("Images/FlagRed.png");
+    background-repeat:no-repeat;
+}
+.flag-yellow {   
+    padding-bottom:1px;   
+    padding-left: 25px;
+    border:thin;
+    background-image:url("Images/FlagYellow.png");
+    background-repeat:no-repeat;
+}
+.flag-orange {   
+    padding-bottom:1px;   
+    padding-left: 25px;
+    border:thin;
+    background-image:url("Images/FlagOrange.png");
+    background-repeat:no-repeat;
+}
+.flag-green {      
+    padding-bottom:1px;   
+    padding-left: 25px;
+    border:thin;
+    background-image:url("Images/FlagGreen.png");
+    background-repeat:no-repeat;
+}
+.facebook-icon {    
+    height: auto;
+    width: auto;
+    margin-top:5px;  
+    margin-left:7px; 
+    border:none;    
+    background-image:url("Images/facebook.png");
+    background-repeat:no-repeat;
+}
+.twitter-icon {     
+    height: auto;
+    width: auto;    
+    margin-top:5px;   
+    margin-left:7px;       
+    border:none;    
+    background-image:url("Images/twitter.png");
+    background-repeat:no-repeat;
+}
+.linkedin-icon {  
+    height: auto;
+    width: auto;    
+    margin-top:5px;    
+    margin-left:7px;       
+    border:none;    
+    background-image:url("Images/linkedin.png");
+    background-repeat:no-repeat;
+}
+
+.control {
+    margin: 0 auto;
+    width: 210px;
+}
+.darkForeground{
+    color:white;
+}
+.lightForeground{
+    color:black;
+}
+
+.drawer {
+    background-image: url('Images/drawericon.png');
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    -ms-align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    /*text-indent: 50px;*/
+    top: 20px;
+    left: -10px;
+    width: 32px;
+    z-index: 3;
+}
+.navi {
+    background: none repeat scroll 0 0 #C4C4B4;
+    color: #fff;
+    height: 32px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.rotator {       
+    position:absolute;   
+    cursor: pointer;
+    width:auto;
+    height:auto;
+    top: 15px;
+    left: 8px;    
+    z-index:1000;  
+}
+
+#disclaimer {
+    background:rgba(0, 0, 0, 0.7);   
+    color:white;
+    text-align:center;
+    padding:1px;
+    position:fixed;
+    left: -1px;
+    width:100%;
+    top:1px;
+    z-index:30;
+}

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Account_Ledger">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Mastri Contabilità" />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <DisplayName
+            Value="Descrizione Mastro" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Account_class"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="4" />
+          <DisplayName
+            Value="Classe Contabile" />
+          <SupportedValue
+            DisplayName="Attività/Liquidità"
+            Value="0101" />
+          <SupportedValue
+            DisplayName="Attività/Banche e Crediti"
+            Value="0102" />
+          <SupportedValue
+            DisplayName="Attività/Portafoglio"
+            Value="0103" />
+          <SupportedValue
+            DisplayName="Attività/Clienti Italia"
+            Value="0104" />
+          <SupportedValue
+            DisplayName="Attività/Altri Crediti"
+            Value="0105" />
+          <SupportedValue
+            DisplayName="Attività/Rimanenza"
+            Value="0106" />
+          <SupportedValue
+            DisplayName="Passività/Fornitori"
+            Value="0207" />
+          <SupportedValue
+            DisplayName="Passività/Altri Debiti"
+            Value="0208" />
+          <SupportedValue
+            DisplayName="Passività/Capitale Netto"
+            Value="0209" />
+          <SupportedValue
+            DisplayName="Costi/Rimanenze Iniziali"
+            Value="0310" />
+          <SupportedValue
+            DisplayName="Costi/Acquisiti"
+            Value="0311" />
+          <SupportedValue
+            DisplayName="Costi/Spese Generali"
+            Value="0312" />
+          <SupportedValue
+            DisplayName="Costi/Risultati di Esercizio"
+            Value="0313" />
+          <SupportedValue
+            DisplayName="Ricavi/Vendite"
+            Value="0414" />
+          <SupportedValue
+            DisplayName="Ricavi/Proventi Diversi"
+            Value="0415" />
+          <SupportedValue
+            DisplayName="Ricavi/Rimanenze Finali"
+            Value="0416" />
+          <SupportedValue
+            DisplayName="Conti d'ordine/Beni di Terzi"
+            Value="0517" />
+          <SupportedValue
+            DisplayName="Conti Riepologativi/Conti Riepologativi"
+            Value="0618" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Code"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="2" />
+          <DisplayName
+            Value="Codice Conto" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Summary_Code"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="7" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Accounts"
+        Association="Account_Account_Ledger"
+        FromEnd="Account_Ledger"
+        ToEnd="Account" />
+      <NavigationProperty
+        Name="Account_Operation"
+        Association="Account_Operation_Account_Ledger"
+        FromEnd="Account_Ledger"
+        ToEnd="Account_Operation">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Operazioni Contabili" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="Account_Account_Ledger">
+    <AssociationEnd
+      Name="Account"
+      Multiplicity="Many"
+      EntityType="Account" />
+    <AssociationEnd
+      Name="Account_Ledger"
+      Multiplicity="One"
+      EntityType="Account_Ledger">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Account_Ledgers"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Account_Ledger" />
+    <QueryOperation
+      Name="Account_Ledgers_Single"
+      ReturnType="Account_Ledger">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Account_Ledgers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Account_Ledgers_SingleOrDefault"
+      ReturnType="Account_Ledger">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri oppure null se non esiste l'entità." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Account_Ledgers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Account_Account_LedgerSet"
+      Association="Account_Account_Ledger">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Account_Ledger"
+        EntitySet="Account_Ledgers" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Account_Ledgers">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Account_Operation_Account_Ledger"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Account_Account_LedgerSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Account_Account_LedgerSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Account_Account_LedgerSet]/Members[Account]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Account_Account_Ledger" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Account_Account_LedgerSet]/Members[Account_Ledger]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

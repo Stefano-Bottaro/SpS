@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Company">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Dati Azienda" />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Nominativo" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Legal_Address"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Sede Legale" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Geo_City"
+        Association="Company_Geo_City"
+        FromEnd="Company"
+        ToEnd="Geo_City">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Città" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="Email"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Vat"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="17" />
+          <DisplayName
+            Value="Partita Iva" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CCIAA"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Logo"
+        PropertyType="Microsoft.LightSwitch.Extensions:Image">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Mail_Server"
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo Mail Server" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Sms_Server"
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Indirizzo Sms Server" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Company_Banks"
+        Association="Company_Company_Bank"
+        FromEnd="Company"
+        ToEnd="Company_Bank">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Banche appoggio" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Company_TimetableCollection"
+        Association="Company_Timetable_Company"
+        FromEnd="Company"
+        ToEnd="Company_Timetable" />
+      <NavigationProperty
+        Name="Company_branches"
+        Association="Company_branch_Company"
+        FromEnd="Company"
+        ToEnd="Company_branch" />
+      <EntityProperty
+        Name="License_Expire"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <Hidden />
+          <DisplayName
+            Value="Scadenza licenza" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="created"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Rooms"
+        Association="Room_Company"
+        FromEnd="Company"
+        ToEnd="Room" />
+      <NavigationProperty
+        Name="Sectors"
+        Association="Sector_Company"
+        FromEnd="Company"
+        ToEnd="Sector" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="Company_Company_Bank">
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Company_Bank"
+      Multiplicity="Many"
+      EntityType="Company_Bank" />
+  </Association>
+  <Association
+    Name="Company_Timetable_Company">
+    <AssociationEnd
+      Name="Company_Timetable"
+      Multiplicity="Many"
+      EntityType="Company_Timetable" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Company_branch_Company">
+    <AssociationEnd
+      Name="Company_branch"
+      Multiplicity="Many"
+      EntityType="Company_branch" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Room_Company">
+    <AssociationEnd
+      Name="Room"
+      Multiplicity="Many"
+      EntityType="Room" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Sector_Company">
+    <AssociationEnd
+      Name="Sector"
+      Multiplicity="Many"
+      EntityType="Sector" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Companies"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Company" />
+    <QueryOperation
+      Name="Companies_Single"
+      ReturnType="Company">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Companies" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Companies_SingleOrDefault"
+      ReturnType="Company">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Restituisce l'entità la cui identità è specificata dai parametri oppure null se non esiste l'entità." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Companies" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Il valore della proprietà chiave 'Id' dell'entità da recuperare." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Company_Company_BankSet"
+      Association="Company_Company_Bank">
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+      <AssociationSetEnd
+        Name="Company_Bank"
+        EntitySet="Company_Banks" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Company_Timetable_CompanySet"
+      Association="Company_Timetable_Company">
+      <AssociationSetEnd
+        Name="Company_Timetable"
+        EntitySet="Company_Timetables" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Company_branch_CompanySet"
+      Association="Company_branch_Company">
+      <AssociationSetEnd
+        Name="Company_branch"
+        EntitySet="Company_branches" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Room_CompanySet"
+      Association="Room_Company">
+      <AssociationSetEnd
+        Name="Room"
+        EntitySet="Rooms" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Sector_CompanySet"
+      Association="Sector_Company">
+      <AssociationSetEnd
+        Name="Sector"
+        EntitySet="Sectors" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Companies">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Company_State"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_Company_BankSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_Company_BankSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Company_BankSet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Company_BankSet]/Members[Company_Bank]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_Company_Bank" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_Timetable_CompanySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_Timetable_CompanySet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Timetable_CompanySet]/Members[Company_Timetable]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_Timetable_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Timetable_CompanySet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_branch_CompanySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_branche_CompanySet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_branch_CompanySet]/Members[Company_branch]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_branche_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_branch_CompanySet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Room_CompanySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Room_CompanySet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Room_CompanySet]/Members[Room]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Room_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Room_CompanySet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Sector_CompanySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Sector_CompanySet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sector_CompanySet]/Members[Sector]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Sector_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sector_CompanySet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

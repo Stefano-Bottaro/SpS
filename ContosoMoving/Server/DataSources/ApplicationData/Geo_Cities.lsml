@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Geo_City">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Città" />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Comune" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Abbreviation"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Pr" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cap"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="6" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Regions"
+        Association="Geo_Region_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Geo_Region">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Regione" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Customers"
+        Association="Customer_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Customer">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Clienti" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Company_Banks"
+        Association="Company_Bank_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Company_Bank" />
+      <NavigationProperty
+        Name="Suppliers"
+        Association="Supplier_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Supplier" />
+      <NavigationProperty
+        Name="Companies"
+        Association="Company_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Company" />
+      <NavigationProperty
+        Name="Company_branches"
+        Association="Company_branch_Geo_City"
+        FromEnd="Geo_City"
+        ToEnd="Company_branch" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="Customer_Geo_City">
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="Many"
+      EntityType="Customer" />
+    <AssociationEnd
+      Name="Geo_City"
+      EntityType="Geo_City">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Company_Bank_Geo_City">
+    <AssociationEnd
+      Name="Company_Bank"
+      Multiplicity="Many"
+      EntityType="Company_Bank" />
+    <AssociationEnd
+      Name="Geo_City"
+      Multiplicity="One"
+      EntityType="Geo_City">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Supplier_Geo_City">
+    <AssociationEnd
+      Name="Supplier"
+      Multiplicity="Many"
+      EntityType="Supplier" />
+    <AssociationEnd
+      Name="Geo_City"
+      Multiplicity="One"
+      EntityType="Geo_City">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Company_Geo_City">
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="Many"
+      EntityType="Company" />
+    <AssociationEnd
+      Name="Geo_City"
+      Multiplicity="One"
+      EntityType="Geo_City">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Company_branch_Geo_City">
+    <AssociationEnd
+      Name="Company_branch"
+      Multiplicity="Many"
+      EntityType="Company_branch" />
+    <AssociationEnd
+      Name="Geo_City"
+      Multiplicity="One"
+      EntityType="Geo_City">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Geo_Cities"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Geo_City" />
+    <QueryOperation
+      Name="Geo_Cities_Single"
+      ReturnType="Geo_City">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Geo_Cities" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Geo_Cities_SingleOrDefault"
+      ReturnType="Geo_City">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Geo_Cities" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Customer_States"
+      Association="Customer_Geo_City">
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+      <AssociationSetEnd
+        Name="Geo_City"
+        EntitySet="Geo_Cities" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Company_Bank_Geo_CitySet"
+      Association="Company_Bank_Geo_City">
+      <AssociationSetEnd
+        Name="Company_Bank"
+        EntitySet="Company_Banks" />
+      <AssociationSetEnd
+        Name="Geo_City"
+        EntitySet="Geo_Cities" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Supplier_Geo_CitySet"
+      Association="Supplier_Geo_City">
+      <AssociationSetEnd
+        Name="Supplier"
+        EntitySet="Suppliers" />
+      <AssociationSetEnd
+        Name="Geo_City"
+        EntitySet="Geo_Cities" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Company_Geo_CitySet"
+      Association="Company_Geo_City">
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+      <AssociationSetEnd
+        Name="Geo_City"
+        EntitySet="Geo_Cities" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Company_branch_Geo_CitySet"
+      Association="Company_branch_Geo_City">
+      <AssociationSetEnd
+        Name="Company_branch"
+        EntitySet="Company_branches" />
+      <AssociationSetEnd
+        Name="Geo_City"
+        EntitySet="Geo_Cities" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Geo_Cities">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Geo_Region_Geo_City"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Customer_States">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Customer_States" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_States]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Customer_Geo_City" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Customer_States]/Members[Geo_City]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_Bank_Geo_CitySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_Bank_StateSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Bank_Geo_CitySet]/Members[Company_Bank]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_Bank_State" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Bank_Geo_CitySet]/Members[Geo_City]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Supplier_Geo_CitySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Supplier_StateSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Supplier_Geo_CitySet]/Members[Supplier]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Supplier_State" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Supplier_Geo_CitySet]/Members[Geo_City]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_Geo_CitySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_StateSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Geo_CitySet]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_State" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_Geo_CitySet]/Members[Geo_City]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Company_branch_Geo_CitySet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Company_branche_StateSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_branch_Geo_CitySet]/Members[Company_branch]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Company_branche_State" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Company_branch_Geo_CitySet]/Members[Geo_City]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

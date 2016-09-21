@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Product" />
+      <DefaultScreen
+        Value="Detail_Product">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Product/Properties[Id]"
+            ScreenParameter="Detail_Product/Properties[ProductId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+      <SummaryProperty
+        Property="Product/Properties[Description]" />
+    </EntityType.Attributes>
+  </EntityType>
+</Application>

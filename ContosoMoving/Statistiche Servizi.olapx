@@ -1,0 +1,32 @@
+<C1OlapPage>
+  <C1OlapEngine ShowZeros="True" ShowTotalsRows="GrandTotals" ShowTotalsColumns="GrandTotals">
+    <Fields>
+      <Field name="Category" subtotal="Count" />
+      <Field name="Commission" subtotal="Sum" format="n0" />
+      <Field name="Description" subtotal="Count" />
+      <Field name="Employee_Name" subtotal="Count" />
+      <Field name="Name" subtotal="Count" />
+      <Field name="Price" subtotal="Sum" format="n0" />
+      <Field name="Quantity" subtotal="Sum" format="n0" />
+      <Field name="Total" subtotal="Sum" format="n0" />
+    </Fields>
+    <RowFields>
+      <Field name="Name" />
+    </RowFields>
+    <ColumnFields>
+      <Field name="Category" />
+    </ColumnFields>
+    <ValueFields MaxItems="-1">
+      <Field name="Total" />
+    </ValueFields>
+  </C1OlapEngine>
+  <C1OlapPrintDocument>
+    <Header Text="&amp;[ViewTitle]&#x9;&amp;[Date]" Separator="True" />
+    <Footer Text="Page &amp;[Page] of &amp;[PageCount]" Separator="True" />
+    <Grid ShowGrid="True" GridOptions="1" />
+    <Chart ShowChart="True" ChartFillsPage="True" />
+    <RawData ShowRawData="False" RawDataOptions="1" />
+    <PageSettings Margins="0,0,0,0" />
+  </C1OlapPrintDocument>
+  <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" ChartTotals="False" />
+</C1OlapPage>

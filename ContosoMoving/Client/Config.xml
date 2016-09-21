@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Manifests>
+    <Manifest>Microsoft.LightSwitch.Base.Client.Manifest.xml</Manifest>
+    <Manifest>Microsoft.LightSwitch.Client.Internal.Manifest.xml</Manifest>
+  </Manifests>
+  <SubsystemPackages>
+    <SubsystemPackage>ModelLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeExtensionLoader</SubsystemPackage>
+    <SubsystemPackage>PresentationRuntimeLoader</SubsystemPackage>
+    <SubsystemPackage>ReportingLoader</SubsystemPackage>
+    <SubsystemPackage>RulesLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeServicesLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeShellLoader</SubsystemPackage>
+    <SubsystemPackage>ThemingRuntimeLoader</SubsystemPackage>
+    <SubsystemPackage>UtilitiesLoader</SubsystemPackage>
+    <SubsystemPackage>BaseServicesLoader</SubsystemPackage>
+    <SubsystemPackage>DiagnosticsLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeUserCodeLoader</SubsystemPackage>
+  </SubsystemPackages>
+  <UserCodeAssemblies></UserCodeAssemblies>
+  <ExtensionAssemblies>
+    <ExtensionAssembly>Microsoft.LightSwitch.SdkProxy, Version=10.0.11.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>OfficeIntegration.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>OfficeIntegration.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>ImageGalleryExtension.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>ImageGalleryExtension.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>MetroThemeExtension.Client, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>MetroThemeExtension.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>PixataCustomControls.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>PixataCustomControls.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>HyperlinkBusinessType.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>HyperlinkBusinessType.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.Schedule.Client, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.Schedule.Common, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Schedule.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Toolbar.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Data.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.DateTimeEditors.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.Olap.Client, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.Olap.Common, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Olap.5, Version=5.0.20133.246, Culture=neutral, PublicKeyToken=79882D576C6336DA</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.FlexGrid.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Extended.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Chart.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>PaulozziCo.MetroShell.Client, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>PaulozziCo.MetroShell.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.PdfViewer.Client, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.PdfViewer.Common, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.PdfViewer.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Zip.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>ElylsExtensions.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>ElylsExtensions.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>Liquid.RichText, Version=5.2.7.15116, Culture=neutral, PublicKeyToken=7FBDD25C3FCC3919</ExtensionAssembly>
+    <ExtensionAssembly>Liquid, Version=5.2.7.15946, Culture=neutral, PublicKeyToken=7FBDD25C3FCC3919</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.FlexGrid.Client, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.FlexGrid.Common, Version=2.0.20133.47, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.FlexGridFilter.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Excel.5, Version=5.0.20133.373, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+  </ExtensionAssemblies>
+</Configuration>
