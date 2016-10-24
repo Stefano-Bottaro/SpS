@@ -71,7 +71,7 @@
       </NavigationProperty>
       <EntityProperty
         Name="Email"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
           <MaxLength
@@ -100,7 +100,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Logo"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image">
+        PropertyType=":Binary">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -108,22 +108,22 @@
       </EntityProperty>
       <EntityProperty
         Name="Mail_Server"
-        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="Indirizzo Mail Server" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Sms_Server"
-        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="Indirizzo Sms Server" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

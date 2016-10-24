@@ -109,8 +109,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -181,8 +180,7 @@
                 <ContentItem
                   Name="Average_Ticket"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -213,8 +211,7 @@
                 <ContentItem
                   Name="Commission1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -565,7 +562,7 @@
                     <ContentItem
                       Name="Commission"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>

@@ -50,7 +50,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Global_Objective_Target"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -59,17 +59,11 @@
             Scale="2" />
           <DisplayName
             Value="Obiettivo Globale (Importo)" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Global_Objective_Value"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -78,12 +72,6 @@
             Scale="2" />
           <DisplayName
             Value="Obiettivo Globale (realizzato)" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -99,7 +87,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Individual_Objective_A_Target"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -108,17 +96,11 @@
             Scale="2" />
           <DisplayName
             Value="Obiettivo individuale (importo)" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Individual_Objective_A_Value"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -127,12 +109,6 @@
             Scale="2" />
           <DisplayName
             Value="Obiettivo individuale (realizzato)" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

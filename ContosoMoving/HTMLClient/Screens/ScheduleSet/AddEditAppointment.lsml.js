@@ -56,3 +56,8 @@ myapp.AddEditAppointment.Employee_Name_postRender = function (element, contentIt
         };
     });
 };
+
+myapp.AddEditAppointment.EmployeeId_postRender = function (element, contentItem) {
+    // Write code here.
+
+};

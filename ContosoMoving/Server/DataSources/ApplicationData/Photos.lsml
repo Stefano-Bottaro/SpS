@@ -39,7 +39,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Picture"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DisplayName

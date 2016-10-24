@@ -79,63 +79,45 @@
       </EntityProperty>
       <EntityProperty
         Name="Price_List"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="2" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
           <DisplayName
             Value="Listino" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Discount"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="9" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
-            <Property
-              Name="DecimalDigits"
-              Value="0" />
-          </Attribute>
           <DisplayName
             Value="Sconto" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Cost"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="2" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
           <DisplayName
             Value="Costo" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Shipping_Cost"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -171,7 +153,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Total"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -180,12 +162,6 @@
             Scale="2" />
           <DisplayName
             Value="Totale" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

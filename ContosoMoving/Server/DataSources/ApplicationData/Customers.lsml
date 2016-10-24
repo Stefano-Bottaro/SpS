@@ -87,7 +87,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Picture"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DisplayName
@@ -96,7 +96,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Attachment"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
@@ -193,42 +193,42 @@
       </EntityProperty>
       <EntityProperty
         Name="Email"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="E-mail" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Twitter_Address"
-        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="Indirizzo Twitter" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="FaceBook_Address"
-        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="Indirizzo FaceBook" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="LinkedIn_Address"
-        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="Indirizzo Linked In" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -272,7 +272,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Discount"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -280,12 +280,6 @@
             Scale="2" />
           <DisplayName
             Value="Sconto" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
-            <Property
-              Name="DecimalDigits"
-              Value="0" />
-          </Attribute>
           <Range
             Minimum="0" />
         </EntityProperty.Attributes>
@@ -393,18 +387,12 @@
       </EntityProperty>
       <EntityProperty
         Name="Average_Expense"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="2" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
           <Hidden />
           <DisplayName
             Value="Spesa media" />
@@ -412,24 +400,18 @@
       </EntityProperty>
       <EntityProperty
         Name="Expense_Last_Year"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
             Scale="2" />
           <DisplayName
             Value="Spesa Ultimo Anno" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Expense"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -437,12 +419,6 @@
             Scale="2" />
           <DisplayName
             Value="Spesa totale" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
           <Range
             Minimum="0" />
         </EntityProperty.Attributes>

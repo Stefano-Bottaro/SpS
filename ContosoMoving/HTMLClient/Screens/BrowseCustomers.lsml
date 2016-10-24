@@ -120,7 +120,7 @@
                     <ContentItem
                       Name="Picture"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Image?">
+                      DataType=":Binary?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -310,7 +310,7 @@
                   <ContentItem
                     Name="Average_Expense"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -616,7 +616,7 @@
                   <ContentItem
                     Name="Picture1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image?">
+                    DataType=":Binary?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>

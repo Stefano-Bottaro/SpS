@@ -49,7 +49,7 @@
               <ContentItem
                 Name="Picture"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

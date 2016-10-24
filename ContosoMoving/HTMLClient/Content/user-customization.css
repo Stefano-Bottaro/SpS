@@ -688,6 +688,55 @@ screen and (max-width: 640px) and (max-height: 400px) and (orientation: landscap
     background-repeat:no-repeat;
 }
 
+.important{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/exclamation.png');    
+    background-repeat:no-repeat;
+}
+.user{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Female-02-WF.png');    
+    background-repeat:no-repeat;
+}
+.phone{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Telephone -03.png');    
+    background-repeat:no-repeat;
+}
+.hourglass{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Hour-Glass.png');    
+    background-repeat:no-repeat;
+}
+.wrench{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Wrench-WF.png');    
+    background-repeat:no-repeat;
+}
+.sector{
+    height: 16px;
+    width: 16px;    
+    padding-bottom:1px;   
+    border:thin;
+    background-image:url('Images/Workflow-01-WF.png');    
+    background-repeat:no-repeat;    
+}
+
 .flag-red {   
     padding-bottom:1px;   
     padding-left: 25px;

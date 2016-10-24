@@ -53,7 +53,7 @@
                   <ContentItem
                     Name="Logo"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image"
+                    DataType=":Binary"
                     View="Microsoft.LightSwitch.MobileWeb:Image">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>

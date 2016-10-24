@@ -217,12 +217,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:TodoList" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:Service_Product" />
     </EntityType.Attributes>
   </EntityType>
@@ -628,4 +622,16 @@
         Target="ServiceInterface:Parameter" />
     </EntityType.Attributes>
   </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Task" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Task_Employee" />
+    </Association.Attributes>
+  </Association>
 </Application>

@@ -156,7 +156,7 @@
                 <ContentItem
                   Name="Email"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -218,7 +218,7 @@
                 <ContentItem
                   Name="Discount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -428,7 +428,7 @@
               <ContentItem
                 Name="Picture"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -565,7 +565,7 @@
                 <ContentItem
                   Name="Email2"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -582,7 +582,7 @@
                 <ContentItem
                   Name="Discount3"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -651,7 +651,7 @@
                 <ContentItem
                   Name="Average_Expense"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

@@ -111,8 +111,7 @@
               <ContentItem
                 Name="Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -125,7 +124,7 @@
               <ContentItem
                 Name="Offer_Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Prezzo Offerta" />
@@ -142,8 +141,7 @@
               <ContentItem
                 Name="Offer_Discount"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Percent?"
-                View="Microsoft.LightSwitch.Extensions:PercentViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

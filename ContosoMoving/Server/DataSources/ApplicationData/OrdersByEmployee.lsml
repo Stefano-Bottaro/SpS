@@ -79,10 +79,7 @@
       <QueryOperation.SortCriteria>
         <SortCriterion
           Direction="Descending">
-          <ChainExpression>
-            <MemberExpression
-              Member="Total" />
-          </ChainExpression>
+          <ChainExpression />
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>

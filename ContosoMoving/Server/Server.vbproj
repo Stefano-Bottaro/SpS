@@ -118,14 +118,12 @@
     <Reference Include="Syncfusion.EJ.Export, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\13.2.0.29\Assemblies\4.5.1\Syncfusion.EJ.Export.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.EJ.ReportViewer, Version=13.2451.0.29, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.LightSwitch.Extension.XlsIO.Common">
       <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Server\Reference\Syncfusion.LightSwitch.Extension.XlsIO.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.LightSwitch.Extension.XlsIO.Server">
       <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Server\Reference\Syncfusion.LightSwitch.Extension.XlsIO.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.ReportWriter.Base, Version=13.2451.0.29, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.XlsIO.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\13.2.0.29\Assemblies\4.5.1\Syncfusion.XlsIO.Base.dll</HintPath>
     </Reference>
@@ -349,7 +347,6 @@
     <Compile Include="SMTPMailHelper.vb" />
     <Compile Include="UserCode\ExternalService.vb" />
     <Compile Include="UserCode\Shared\Product_Document_Item.vb" />
-    <Compile Include="ValuesController.vb" />
     <Compile Include="WebAPI\GridExportingController.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -371,7 +368,6 @@
     <Content Include="Content\msls-dark-2.5.4.css" />
     <Content Include="Content\msls-light-2.5.4.css" />
     <Content Include="generated.parameters.xml" />
-    <Content Include="ModelManifest.xml" />
     <LightSwitchModel Include="DataSources\ApplicationData\Parameters.lsml" />
     <LightSwitchModel Include="DataSources\ApplicationData\Cut_by_Month.lsml">
       <DependentUpon>Order_Items.lsml</DependentUpon>
@@ -388,255 +384,11 @@
     <LightSwitchModel Include="DataSources\ApplicationData\Statist_Cut_By_Period.lsml">
       <DependentUpon>Statists.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Task.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\AppointmentByDay.lsml">
+      <DependentUpon>Appointments.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="My Project\PublishProfiles\SalonCoach - Web Deploy.pubxml" />
-    <Content Include="Scripts\datajs-1.1.3.js" />
-    <Content Include="Scripts\datajs-1.1.3.min.js" />
-    <None Include="Scripts\msls-2.5.4-vsdoc.js" />
-    <None Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
-    <Content Include="Scripts\msls-2.5.4.js" />
-    <Content Include="Scripts\msls-2.5.4.min.js" />
-    <Content Include="Scripts\msls.js" />
-    <Content Include="Scripts\winjs-1.0.js" />
-    <Content Include="Scripts\winjs-1.0.min.js" />
-    <Content Include="Web\ContosoMoving.Client.xap" />
-    <_ServerFile Include="LogIn.aspx" />
-    <_ServerFile Include="LogOut.aspx" />
-    <Content Include="Content\images\ajax-loader.gif" />
-    <Content Include="Content\images\icons-18-black.png" />
-    <Content Include="Content\images\icons-18-white.png" />
-    <Content Include="Content\images\icons-36-black.png" />
-    <Content Include="Content\images\icons-36-white.png" />
-    <Content Include="Content\jquery.mobile-1.3.0.css" />
-    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
-    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
-    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
-    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
-    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
-    <Content Include="default.aspx" />
-    <Content Include="Global.asax" />
-    <Content Include="packages.config" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Cities.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Appointments.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Employees.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Photos.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Rooms.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\InventoryItems.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Brands.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Categories.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Taxes.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Colors.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Offers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Products.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Preferences.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Anamnesies.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Promotes.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Companies.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Company_Banks.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Company_Timetables.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Employes_Timetables.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Subscriptions.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Suppliers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Accounts.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Account_Ledgers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Account_Operations.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Account_Lists.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Counters.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Menues.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Services.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Service_Tipologies.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Service_Offers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Documents.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Agents.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Schedules.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_Histories.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_Items.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Company_branches.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Fidelity_Cards.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Messagings.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Regions.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Countries.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Time_Markers.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Incentive_Plans.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Orders.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\TodoLists.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Service_Products.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Account_Overheads.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Statists.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Comunications.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Offers_Details.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Sectors.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\WorkSpaces.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Subscription_Item.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Come_Backs.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\Come_Back_Templates.lsml" />
-    <LightSwitchModel Include="My Project\DataSources\ApplicationData.lsml" />
-    <LightSwitchModel Include="DataSources\ApplicationData\AvailableEmployees.lsml">
-      <DependentUpon>Employees.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\UpcomingAppointments.lsml">
-      <DependentUpon>Appointments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\UpcomingAppointmentsForAllEmployees.lsml">
-      <DependentUpon>Appointments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Brand.lsml">
-      <DependentUpon>Product_Brands.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Category.lsml">
-      <DependentUpon>Product_Categories.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\TopTenCustomer.lsml">
-      <DependentUpon>Customers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\ImportantAppointment.lsml">
-      <DependentUpon>Appointments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Cash_Operation.lsml">
-      <DependentUpon>Account_Lists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\First_note.lsml">
-      <DependentUpon>Account_Lists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Schedule_by_date.lsml">
-      <DependentUpon>Schedules.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\OverHead_By_Year.lsml">
-      <DependentUpon>Account_Overheads.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Orders_Monthly.lsml">
-      <DependentUpon>Orders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_by_Year.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_Items_by_Year.lsml">
-      <DependentUpon>Order_Items.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\SuppliersByName.lsml">
-      <DependentUpon>Suppliers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\AgentByName.lsml">
-      <DependentUpon>Agents.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Inventory.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Under_Guard.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\ServiceByCategory.lsml">
-      <DependentUpon>Product_Services.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\CustomerByName.lsml">
-      <DependentUpon>Customers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\OrdersByEmployee.lsml">
-      <DependentUpon>Orders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\PhotoByCustomer.lsml">
-      <DependentUpon>Photos.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\OffersByService.lsml">
-      <DependentUpon>Service_Offers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\EventByDate.lsml">
-      <DependentUpon>Comunications.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Offers_Detail_by_Name.lsml">
-      <DependentUpon>Offers_Details.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Appointment_By_Date.lsml">
-      <DependentUpon>Appointments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_By_Type.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Product_4_Sell.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Date.lsml">
-      <DependentUpon>Orders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Customer.lsml">
-      <DependentUpon>Orders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_item_By_Filter.lsml">
-      <DependentUpon>Order_Items.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Appointment4Schedule.lsml">
-      <DependentUpon>Appointments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\AccountByName.lsml">
-      <DependentUpon>Accounts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Time_Marker_by_Filter.lsml">
-      <DependentUpon>Employee_Time_Markers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\TopTenEmployee.lsml">
-      <DependentUpon>Employees.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\TopTenProduct.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Top3Customers.lsml">
-      <DependentUpon>Customers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Top3Employee.lsml">
-      <DependentUpon>Employees.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Top3Products.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\ProductDocumentByFilter.lsml">
-      <DependentUpon>Product_Documents.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\EmployeeIncentiveByFilter.lsml">
-      <DependentUpon>Employee_Incentive_Plans.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\CustomerSegmentation.lsml">
-      <DependentUpon>Customers.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\ToDoListByFilter.lsml">
-      <DependentUpon>TodoLists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\GeoCityByFilter.lsml">
-      <DependentUpon>Geo_Cities.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_Segmentation.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Year.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Category.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Service.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Hour.lsml">
-      <DependentUpon>Orders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Hour.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Sell_By_Employee.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_Visit.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_newClient.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Product_On_Sell.lsml">
-      <DependentUpon>Statists.lsml</DependentUpon>
-    </LightSwitchModel>
-    <None Include="My Project\PublishProfiles\EssebI.pubxml" />
-    <None Include="My Project\PublishProfiles\SalonCoach %282%29.pubxml" />
-    <None Include="My Project\PublishProfiles\SalonCoach %283%29.pubxml" />
-    <None Include="My Project\PublishProfiles\SalonCoach.pubxml" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -651,6 +403,8 @@
     <Content Include="Scripts\angular-messages.js" />
     <Content Include="Scripts\angular-messages.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-parse-ext.js" />
+    <Content Include="Scripts\angular-parse-ext.min.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -662,19 +416,23 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\datajs-1.1.3.js" />
+    <Content Include="Scripts\datajs-1.1.3.min.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-parse-ext.min.js.map" />
     <Content Include="Scripts\angular-messages.min.js.map" />
     <Content Include="Scripts\angular-message-format.min.js.map" />
     <Content Include="Scripts\angular-loader.min.js.map" />
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <None Include="Scripts\msls-2.5.4-vsdoc.js" />
+    <None Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -1419,6 +1177,244 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Scripts\msls-2.5.4.js" />
+    <Content Include="Scripts\msls-2.5.4.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+    <Content Include="Web\ContosoMoving.Client.xap" />
+    <_ServerFile Include="LogIn.aspx" />
+    <_ServerFile Include="LogOut.aspx" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Cities.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Appointments.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Employees.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Photos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Rooms.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\InventoryItems.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Brands.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Categories.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Taxes.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Colors.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Offers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Products.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Preferences.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Anamnesies.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Promotes.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Companies.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Company_Banks.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Company_Timetables.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Employes_Timetables.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Subscriptions.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Suppliers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Accounts.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Account_Ledgers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Account_Operations.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Account_Lists.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Counters.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Menues.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Services.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Service_Tipologies.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Service_Offers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Documents.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Agents.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Schedules.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_Histories.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_Items.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Company_branches.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Fidelity_Cards.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Messagings.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Regions.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Geo_Countries.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Time_Markers.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Incentive_Plans.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Orders.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Service_Products.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Account_Overheads.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Statists.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Comunications.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Offers_Details.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Sectors.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\WorkSpaces.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Customer_Subscription_Item.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Come_Backs.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Come_Back_Templates.lsml" />
+    <LightSwitchModel Include="My Project\DataSources\ApplicationData.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\AvailableEmployees.lsml">
+      <DependentUpon>Employees.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\UpcomingAppointments.lsml">
+      <DependentUpon>Appointments.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\UpcomingAppointmentsForAllEmployees.lsml">
+      <DependentUpon>Appointments.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Brand.lsml">
+      <DependentUpon>Product_Brands.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Category.lsml">
+      <DependentUpon>Product_Categories.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\TopTenCustomer.lsml">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ImportantAppointment.lsml">
+      <DependentUpon>Appointments.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Cash_Operation.lsml">
+      <DependentUpon>Account_Lists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\First_note.lsml">
+      <DependentUpon>Account_Lists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Schedule_by_date.lsml">
+      <DependentUpon>Schedules.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\OverHead_By_Year.lsml">
+      <DependentUpon>Account_Overheads.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Orders_Monthly.lsml">
+      <DependentUpon>Orders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_by_Year.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_Items_by_Year.lsml">
+      <DependentUpon>Order_Items.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SuppliersByName.lsml">
+      <DependentUpon>Suppliers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\AgentByName.lsml">
+      <DependentUpon>Agents.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Inventory.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Under_Guard.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ServiceByCategory.lsml">
+      <DependentUpon>Product_Services.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\CustomerByName.lsml">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\OrdersByEmployee.lsml">
+      <DependentUpon>Orders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\PhotoByCustomer.lsml">
+      <DependentUpon>Photos.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\OffersByService.lsml">
+      <DependentUpon>Service_Offers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\EventByDate.lsml">
+      <DependentUpon>Comunications.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Offers_Detail_by_Name.lsml">
+      <DependentUpon>Offers_Details.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_By_Type.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Product_4_Sell.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Date.lsml">
+      <DependentUpon>Orders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Customer.lsml">
+      <DependentUpon>Orders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_item_By_Filter.lsml">
+      <DependentUpon>Order_Items.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Appointment4Schedule.lsml">
+      <DependentUpon>Appointments.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\AccountByName.lsml">
+      <DependentUpon>Accounts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Employee_Time_Marker_by_Filter.lsml">
+      <DependentUpon>Employee_Time_Markers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\TopTenEmployee.lsml">
+      <DependentUpon>Employees.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\TopTenProduct.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Top3Customers.lsml">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Top3Employee.lsml">
+      <DependentUpon>Employees.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Top3Products.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ProductDocumentByFilter.lsml">
+      <DependentUpon>Product_Documents.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\EmployeeIncentiveByFilter.lsml">
+      <DependentUpon>Employee_Incentive_Plans.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\CustomerSegmentation.lsml">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\GeoCityByFilter.lsml">
+      <DependentUpon>Geo_Cities.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_Segmentation.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Year.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Category.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Service.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Order_By_Hour.lsml">
+      <DependentUpon>Orders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Sell_By_Hour.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Sell_By_Employee.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_Visit.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Customer_newClient.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Statist_Product_On_Sell.lsml">
+      <DependentUpon>Statists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <None Include="My Project\PublishProfiles\EssebI.pubxml" />
+    <None Include="My Project\PublishProfiles\SalonCoach %282%29.pubxml" />
+    <None Include="My Project\PublishProfiles\SalonCoach %283%29.pubxml" />
+    <None Include="My Project\PublishProfiles\SalonCoach.pubxml" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.mobile-1.3.0.js" />
@@ -1459,6 +1455,9 @@
     <EmbeddedResource Include="ReportTemplate\Sales Dashboard.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>

@@ -24,10 +24,7 @@
       <QueryOperation.SortCriteria>
         <SortCriterion
           Direction="Descending">
-          <ChainExpression>
-            <MemberExpression
-              Member="Expense" />
-          </ChainExpression>
+          <ChainExpression />
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>

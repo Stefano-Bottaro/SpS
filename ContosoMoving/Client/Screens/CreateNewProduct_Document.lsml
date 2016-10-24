@@ -184,7 +184,7 @@
                 <ContentItem
                   Name="Product_DocumentProperty_Check"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Verifica Totale Documento" />
@@ -238,7 +238,7 @@
                 <ContentItem
                   Name="Taxable_Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -263,7 +263,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -288,7 +288,7 @@
                 <ContentItem
                   Name="Shipping_Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -313,7 +313,7 @@
                 <ContentItem
                   Name="Shipping_percentual"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -338,7 +338,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

@@ -100,7 +100,7 @@
       </EntityProperty>
       <EntityProperty
         Name="mail"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="255" />
@@ -108,7 +108,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Discount"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -117,12 +117,6 @@
             Scale="9" />
           <DisplayName
             Value="Sconto" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
-            <Property
-              Name="DecimalDigits"
-              Value="0" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

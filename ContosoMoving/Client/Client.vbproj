@@ -50,6 +50,7 @@
     <LightSwitchProjectTypeV45>Client</LightSwitchProjectTypeV45>
     <MyType>Empty</MyType>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <ApplicationName>SoftwarePerSaloni</ApplicationName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,9 +124,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.Client.Internal.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.LightSwitch.Cosmopolitan.Client">
-      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Cosmopolitan\Client\Reference\Microsoft.LightSwitch.Cosmopolitan.Client.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.LightSwitch.Extensions.Client">
       <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Client\Reference\Microsoft.LightSwitch.Extensions.Client.dll</HintPath>
     </Reference>
@@ -164,9 +162,7 @@
       <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Syncfusion.Compression.Silverlight">
-      <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Client\Reference\Syncfusion.Compression.Silverlight.dll</HintPath>
-    </Reference>
+    <Reference Include="Syncfusion.Compression.Silverlight, Version=13.2500.0.29, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.LightSwitch.Extension.XlsIO.Client">
       <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Client\Reference\Syncfusion.LightSwitch.Extension.XlsIO.Client.dll</HintPath>
     </Reference>
@@ -177,9 +173,7 @@
     <Reference Include="Syncfusion.LightSwitch.Extension.XlsIO.Common">
       <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Client\Reference\Syncfusion.LightSwitch.Extension.XlsIO.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.XlsIO.Silverlight">
-      <HintPath>..\_Pvt_Extensions\Syncfusion.LightSwitch.Extension.XlsIO\Client\Reference\Syncfusion.XlsIO.Silverlight.dll</HintPath>
-    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Silverlight, Version=13.2500.0.29, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.Composition">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -614,12 +608,6 @@
     <LightSwitchModel Include="My Project\ApplicationData\Product_Documents.lsml" />
     <LightSwitchModel Include="My Project\ApplicationData\Order_Items.lsml" />
     <LightSwitchModel Include="My Project\ApplicationData\Orders.lsml" />
-    <Resource Include="fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="Content\bootstrap-theme.css.map" />
-    <None Include="Content\bootstrap.css.map" />
-    <None Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="fonts\glyphicons-halflings-regular.woff" />
-    <None Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="My Project\AppManifest.xml" />
     <None Include="My Project\OutOfBrowserSettings.xml" />
     <LightSwitchModel Include="My Project\Proxies.lsml" />
@@ -723,10 +711,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Resource Include="Content\images\msls-white-icons-36.png" />
     <Resource Include="Content\images\msls-white-icons-18.png" />
     <Resource Include="Content\images\msls-loader-light.gif" />
@@ -760,9 +744,6 @@
     <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
     <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
     <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

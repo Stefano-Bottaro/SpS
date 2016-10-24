@@ -117,7 +117,7 @@
                 <ContentItem
                   Name="Money_Value"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -130,7 +130,7 @@
                 <ContentItem
                   Name="Increment"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

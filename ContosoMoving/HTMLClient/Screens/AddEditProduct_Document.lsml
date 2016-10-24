@@ -140,7 +140,7 @@
                     <ContentItem
                       Name="Picture"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Image?">
+                      DataType=":Binary?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -293,7 +293,7 @@
                     <ContentItem
                       Name="Cost"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -381,7 +381,7 @@
                     <ContentItem
                       Name="Price_List1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -394,7 +394,7 @@
                     <ContentItem
                       Name="Discount1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -407,7 +407,7 @@
                     <ContentItem
                       Name="Shipping_Cost1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -732,7 +732,7 @@
                     <ContentItem
                       Name="Price_List"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?"
+                      DataType=":Decimal?"
                       View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
@@ -788,7 +788,7 @@
                     <ContentItem
                       Name="Discount"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Percent?"
+                      DataType=":Decimal?"
                       View="Microsoft.LightSwitch.MobileWeb:PercentViewer">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
@@ -834,7 +834,7 @@
                     <ContentItem
                       Name="Cost1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -939,7 +939,7 @@
                     <ContentItem
                       Name="Amount"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -1119,7 +1119,7 @@
                 <ContentItem
                   Name="Totale_Imponibile1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1175,7 +1175,7 @@
                 <ContentItem
                   Name="Shipping_Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1243,7 +1243,7 @@
                 <ContentItem
                   Name="Totale_Iva1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1299,7 +1299,7 @@
                 <ContentItem
                   Name="Totale_Documento1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1493,7 +1493,7 @@
                   <ContentItem
                     Name="Taxable_Amount"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1520,7 +1520,7 @@
                   <ContentItem
                     Name="Total"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1578,7 +1578,7 @@
                   <ContentItem
                     Name="Shipping_percentual"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1605,7 +1605,7 @@
                   <ContentItem
                     Name="Product_Document_Payment"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1663,7 +1663,7 @@
                   <ContentItem
                     Name="Vat"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1690,7 +1690,7 @@
                   <ContentItem
                     Name="Product_Document_Payoff"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1805,40 +1805,13 @@
       </ScreenProperty>
       <ScreenProperty
         Name="Totale_Imponibile"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
-        <ScreenProperty.Attributes>
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
+        PropertyType=":Decimal" />
       <ScreenProperty
         Name="Totale_Iva"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
-        <ScreenProperty.Attributes>
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
+        PropertyType=":Decimal?" />
       <ScreenProperty
         Name="Totale_Documento"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
-        <ScreenProperty.Attributes>
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
+        PropertyType=":Decimal?" />
       <ScreenCollectionProperty
         Name="Order_Items"
         PageSize="45"

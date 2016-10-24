@@ -74,7 +74,7 @@
               <ContentItem
                 Name="Mail"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:EmailAddress">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

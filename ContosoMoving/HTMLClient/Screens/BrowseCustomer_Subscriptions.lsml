@@ -63,7 +63,7 @@
                   <ContentItem
                     Name="Picture"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image?">
+                    DataType=":Binary?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -118,7 +118,7 @@
                   <ContentItem
                     Name="Credit"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -173,7 +173,7 @@
                   <ContentItem
                     Name="Debit"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -228,7 +228,7 @@
                   <ContentItem
                     Name="Balance"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>

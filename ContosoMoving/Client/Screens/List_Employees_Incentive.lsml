@@ -114,7 +114,7 @@
                 <ContentItem
                   Name="Email"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -153,7 +153,7 @@
                 <ContentItem
                   Name="Hourly_Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -400,7 +400,7 @@
                 <ContentItem
                   Name="Employees_SelectedItem_Email"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -451,7 +451,7 @@
                 <ContentItem
                   Name="Employees_SelectedItem_Hourly_Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -537,7 +537,7 @@
                 <ContentItem
                   Name="Global_Objective_Target"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -550,7 +550,7 @@
                 <ContentItem
                   Name="Global_Objective_Value"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -576,7 +576,7 @@
                 <ContentItem
                   Name="Individual_Objective_A_Target"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -589,7 +589,7 @@
                 <ContentItem
                   Name="Individual_Objective_A_Value"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

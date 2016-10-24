@@ -73,7 +73,7 @@
                   <ContentItem
                     Name="Picture"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image?">
+                    DataType=":Binary?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -134,7 +134,7 @@
                   <ContentItem
                     Name="Email"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                    DataType=":String?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -342,7 +342,7 @@
                     <ContentItem
                       Name="Twitter_Address"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                      DataType=":String?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -415,7 +415,7 @@
                     <ContentItem
                       Name="LinkedIn_Address"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                      DataType=":String?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -483,7 +483,7 @@
                     <ContentItem
                       Name="Average_Expense"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?"
+                      DataType=":Decimal?"
                       View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
@@ -690,7 +690,7 @@
                     <ContentItem
                       Name="FaceBook_Address"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                      DataType=":String?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -992,7 +992,7 @@
                 <ContentItem
                   Name="Expense"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1091,7 +1091,7 @@
                 <ContentItem
                   Name="Expense_Last_Year"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -1159,7 +1159,7 @@
                   <ContentItem
                     Name="Discount"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Percent?"
+                    DataType=":Decimal?"
                     View="Microsoft.LightSwitch.MobileWeb:PercentEditor">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
@@ -2031,7 +2031,7 @@
                 <ContentItem
                   Name="Credit"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -2066,7 +2066,7 @@
                 <ContentItem
                   Name="Debit"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -2101,7 +2101,7 @@
                 <ContentItem
                   Name="Balance"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -2406,7 +2406,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -2431,7 +2431,7 @@
                 <ContentItem
                   Name="Commission"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Commissioni" />
@@ -2483,7 +2483,7 @@
             <ContentItem
               Name="Customer_Picture"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image?"
+              DataType=":Binary?"
               View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
@@ -2503,7 +2503,7 @@
             <ContentItem
               Name="Customer_Attachment"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image?"
+              DataType=":Binary?"
               View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

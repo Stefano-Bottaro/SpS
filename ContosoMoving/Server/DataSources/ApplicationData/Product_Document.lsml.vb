@@ -37,7 +37,7 @@ Namespace LightSwitchApplication
             ricalcolo()
         End Sub
 
-        Private Sub Check_Compute(ByRef result As System.Nullable(Of Decimal))
+        Private Sub Check_Compute(ByRef result As Decimal?)
             'Dim Tot As Decimal
             'For Each entity In Me.Product_Histories
             '    Tot = Tot + entity.Total

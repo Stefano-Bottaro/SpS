@@ -35,10 +35,7 @@
               <BinaryExpression
                 NodeType="LessThanOrEqual">
                 <BinaryExpression.Left>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="EndDate" />
-                  </ChainExpression>
+                  <ChainExpression />
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
                   <ParameterExpression

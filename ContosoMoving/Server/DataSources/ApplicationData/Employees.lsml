@@ -109,12 +109,12 @@
       </NavigationProperty>
       <EntityProperty
         Name="Email"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="E-mail" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -187,7 +187,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Hourly_Cost"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -195,12 +195,6 @@
             Scale="2" />
           <DisplayName
             Value="Costo Orario" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -226,7 +220,7 @@
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
-            Value="50" />
+            Value="10" />
           <SupportedValue
             Value="Si" />
           <SupportedValue
@@ -237,43 +231,31 @@
       </EntityProperty>
       <EntityProperty
         Name="Total_Sales"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="2" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="¤" />
-          </Attribute>
           <DisplayName
             Value="Totale Venduto" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Total_Sales_Last_Year"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
             Scale="2" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="¤" />
-          </Attribute>
           <DisplayName
             Value="Totale Venduto anno precedente" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Photo"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
@@ -321,6 +303,11 @@
         Association="Order_Employee"
         FromEnd="Employee"
         ToEnd="Order" />
+      <NavigationProperty
+        Name="Task"
+        Association="Task_Employee"
+        FromEnd="Employee"
+        ToEnd="Task" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -544,6 +531,16 @@
         Name="Employee"
         EntitySet="Employees" />
     </AssociationSet>
+    <AssociationSet
+      Name="Task_EmployeeSet"
+      Association="Task_Employee">
+      <AssociationSetEnd
+        Name="Task"
+        EntitySet="Task" />
+      <AssociationSetEnd
+        Name="Employee"
+        EntitySet="Employees" />
+    </AssociationSet>
   </EntityContainer>
   <DataService
     Name="ApplicationDataMapping">
@@ -664,5 +661,42 @@
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Task_EmployeeSet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Task_EmployeeSet" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Task_EmployeeSet]/Members[Task]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Task_Employee" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Task_EmployeeSet]/Members[Employee]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
+  <Association
+    Name="Task_Employee">
+    <AssociationEnd
+      Name="Task"
+      Multiplicity="Many"
+      EntityType="Task" />
+    <AssociationEnd
+      Name="Employee"
+      Multiplicity="One"
+      EntityType="Employee">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
 </ServiceApplication>

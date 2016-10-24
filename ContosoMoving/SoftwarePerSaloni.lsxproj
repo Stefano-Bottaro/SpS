@@ -15,15 +15,15 @@
     <LightSwitchVersion>v5.0</LightSwitchVersion>
     <LightSwitchProjectVersion>v4.7</LightSwitchProjectVersion>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
-    <Name>SalonCoach</Name>
+    <Name>SoftwarePerSaloni</Name>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
     <ApplicationServerType>Azure</ApplicationServerType>
     <AuthenticationType>Forms</AuthenticationType>
-    <ApplicationName>SalonCoach</ApplicationName>
-    <AssemblyVersion>2.0.36.0</AssemblyVersion>
+    <ApplicationName>SoftwarePerSaloni</ApplicationName>
+    <AssemblyVersion>3.0.36.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\MSSQLLocalDB</SqlExpressInstanceName>
@@ -136,10 +136,6 @@
       <ExtensionId>EJ.Web</ExtensionId>
       <Client>EJ.WEB.CLIENT;EJ.WEB.COMMON;EJ.WEB.CLIENT.DESIGN</Client>
       <Server>EJ.WEB.COMMON;EJ.WEB.SERVER</Server>
-    </LightSwitchExtension>
-    <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Cosmopolitan.lspkg">
-      <ExtensionId>Microsoft.LightSwitch.Cosmopolitan</ExtensionId>
-      <Client>MICROSOFT.LIGHTSWITCH.COSMOPOLITAN.CLIENT</Client>
     </LightSwitchExtension>
     <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Extensions.lspkg">
       <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>

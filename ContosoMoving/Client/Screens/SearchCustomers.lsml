@@ -48,7 +48,7 @@
               <ContentItem
                 Name="Picture"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -84,7 +84,7 @@
               <ContentItem
                 Name="Email"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                DataType=":String?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -120,7 +120,7 @@
               <ContentItem
                 Name="Expense_Last_Year"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -155,7 +155,7 @@
               <ContentItem
                 Name="Average_Expense"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -333,7 +333,7 @@
                     <ContentItem
                       Name="Total1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money">
+                      DataType=":Decimal">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -346,7 +346,7 @@
                     <ContentItem
                       Name="Payoff1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>

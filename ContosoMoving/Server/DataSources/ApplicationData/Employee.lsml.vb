@@ -23,6 +23,9 @@ Namespace LightSwitchApplication
 
         End Sub
 
+        Private Sub Employee_Created()
+            Me.Status = "Si"
+        End Sub
     End Class
 
 End Namespace

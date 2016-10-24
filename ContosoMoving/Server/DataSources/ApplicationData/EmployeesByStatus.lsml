@@ -15,7 +15,7 @@
       <QueryOperation.FilterExpression>
         <QueryFilterExpressionTree>
           <BinaryExpression
-            NodeType="NotEqual">
+            NodeType="Equal">
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
@@ -24,7 +24,7 @@
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ConstantExpression
-                Value="False"
+                Value="Si"
                 ResultType=":String?" />
             </BinaryExpression.Right>
           </BinaryExpression>

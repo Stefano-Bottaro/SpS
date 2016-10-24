@@ -39,7 +39,7 @@
             <ContentItem
               Name="Picture"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image?">
+              DataType=":Binary?">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -73,7 +73,7 @@
               <ContentItem
                 Name="Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -100,7 +100,7 @@
               <ContentItem
                 Name="Commission_employee"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -180,7 +180,7 @@
               <ContentItem
                 Name="Product_Service_Amount"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
+                DataType=":Decimal?"
                 View="Microsoft.LightSwitch.RichClient:Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
@@ -223,7 +223,7 @@
               <ContentItem
                 Name="Product_Service_Vat"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
+                DataType=":Decimal?"
                 View="Microsoft.LightSwitch.RichClient:Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
@@ -239,7 +239,7 @@
               <ContentItem
                 Name="Product_Service_Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

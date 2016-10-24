@@ -265,12 +265,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:TodoList" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:Service_Product" />
     </EntityType.Attributes>
   </EntityType>
@@ -668,6 +662,12 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:Order_Item_Product_Document" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Task_Employee" />
     </Association.Attributes>
   </Association>
 </Application>

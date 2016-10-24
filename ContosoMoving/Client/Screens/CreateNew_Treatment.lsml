@@ -117,7 +117,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -130,7 +130,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -143,7 +143,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -209,7 +209,7 @@
               <ContentItem
                 Name="Payment_Point"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -222,7 +222,7 @@
               <ContentItem
                 Name="Payment_Prepayd"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -235,7 +235,7 @@
               <ContentItem
                 Name="Payment"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -248,7 +248,7 @@
               <ContentItem
                 Name="Payoff"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -313,7 +313,7 @@
                 <ContentItem
                   Name="Price_List"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -326,7 +326,7 @@
                 <ContentItem
                   Name="Discount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -352,7 +352,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -365,7 +365,7 @@
                 <ContentItem
                   Name="Total1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -481,7 +481,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

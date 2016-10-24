@@ -59,7 +59,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -72,7 +72,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -85,7 +85,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -98,7 +98,7 @@
                 <ContentItem
                   Name="Vat_perc"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -111,7 +111,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -137,7 +137,7 @@
                 <ContentItem
                   Name="Commission_employee"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -327,7 +327,7 @@
               <ContentItem
                 Name="Picture1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -340,7 +340,7 @@
               <ContentItem
                 Name="Price1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -353,7 +353,7 @@
               <ContentItem
                 Name="Amount1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -366,7 +366,7 @@
               <ContentItem
                 Name="Vat_perc1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -379,7 +379,7 @@
               <ContentItem
                 Name="Vat1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -405,7 +405,7 @@
               <ContentItem
                 Name="Commission_employee1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -545,7 +545,7 @@
                   <ContentItem
                     Name="Cost"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -558,7 +558,7 @@
                   <ContentItem
                     Name="Total1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>

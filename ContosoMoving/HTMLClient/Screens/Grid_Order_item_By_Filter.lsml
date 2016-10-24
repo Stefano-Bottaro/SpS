@@ -309,7 +309,7 @@
                 <ContentItem
                   Name="Prezzo"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -322,7 +322,7 @@
                 <ContentItem
                   Name="Totale"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.MobileWeb:Text">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>

@@ -102,7 +102,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.MobileWeb:Text">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -116,7 +116,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>

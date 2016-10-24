@@ -284,7 +284,7 @@
               <ContentItem
                 Name="Email"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                DataType=":String?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -336,7 +336,7 @@
               <ContentItem
                 Name="Hourly_Cost"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -362,7 +362,7 @@
               <ContentItem
                 Name="Photo"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

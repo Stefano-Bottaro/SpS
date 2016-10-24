@@ -57,7 +57,7 @@
                 <ContentItem
                   Name="Foto"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -189,7 +189,7 @@
                 <ContentItem
                   Name="Picture1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Foto" />
@@ -458,7 +458,7 @@
                 <ContentItem
                   Name="Price2"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -606,7 +606,7 @@
                   <ContentItem
                     Name="Picture"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image?">
+                    DataType=":Binary?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -793,7 +793,7 @@
                   <ContentItem
                     Name="Price"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1036,7 +1036,7 @@
                       <ContentItem
                         Name="Offer_Discount"
                         Kind="Value"
-                        DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                        DataType=":Decimal?">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -1066,7 +1066,7 @@
                       <ContentItem
                         Name="Price1"
                         Kind="Value"
-                        DataType="Microsoft.LightSwitch.Extensions:Money?">
+                        DataType=":Decimal?">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -1079,7 +1079,7 @@
                       <ContentItem
                         Name="Offer_Price"
                         Kind="Value"
-                        DataType="Microsoft.LightSwitch.Extensions:Money?">
+                        DataType=":Decimal?">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -1521,7 +1521,7 @@
                 <ContentItem
                   Name="Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1591,7 +1591,7 @@
                 <ContentItem
                   Name="Stock_Value"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1851,7 +1851,7 @@
                 <ContentItem
                   Name="Cost1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

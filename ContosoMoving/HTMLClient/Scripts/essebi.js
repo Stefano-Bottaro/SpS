@@ -2406,6 +2406,21 @@ function Informativa() {
     printwin.document.write(txt);
     printwin.focus();
 };
+function swimlane(objID, x, y, larghezza, altezza) {
+    //<canvas id="example" width="200" height="200">
+    //This text is displayed if your browser does not support HTML5 Canvas.
+    //</canvas>
+    //Using JavaScript, you can draw on the canvas:
+    // var example = document.getElementById('example');
+    var canvas = document.getElementById(objID);
+    if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        ctx.fillRect(x, y, 120, 800);
+        ctx.fillStyle = 'gray';
+        //ctx.clearRect(45, 45, 60, 60);
+        //ctx.strokeRect(50, 50, 50, 50);
+    }
+}
 
 function scriviCookie(nomeCookie, valoreCookie, durataCookie) {
     var scadenza = new Date();

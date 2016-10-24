@@ -52,7 +52,7 @@
                 <ContentItem
                   Name="Logo1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image">
+                  DataType=":Binary">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -139,7 +139,7 @@
                 <ContentItem
                   Name="Mail_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -227,7 +227,7 @@
                 <ContentItem
                   Name="Email"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -240,7 +240,7 @@
                 <ContentItem
                   Name="Sms_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -620,7 +620,7 @@
                 <ContentItem
                   Name="Trust"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1184,7 +1184,7 @@
             <ContentItem
               Name="Logo"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image"
+              DataType=":Binary"
               View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

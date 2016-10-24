@@ -49,7 +49,7 @@
               <ContentItem
                 Name="Foto"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -230,7 +230,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Foto" />
@@ -324,7 +324,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -463,7 +463,7 @@
             <ContentItem
               Name="Product_Category_Foto"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image?"
+              DataType=":Binary?"
               View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

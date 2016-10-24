@@ -28,10 +28,7 @@
       <QueryOperation.SortCriteria>
         <SortCriterion
           Direction="Descending">
-          <ChainExpression>
-            <MemberExpression
-              Member="Expense_Last_Year" />
-          </ChainExpression>
+          <ChainExpression />
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>

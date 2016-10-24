@@ -38,12 +38,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="App.config" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\clippy.css" />
     <Content Include="Content\dark-theme-2.5.4.css" />
     <Content Include="Content\dark-theme.css" />
@@ -340,6 +334,7 @@
     <Content Include="Content\Images\facebook.png" />
     <Content Include="Content\Images\favorite.png" />
     <Content Include="Content\Images\favorite128.png" />
+    <Content Include="Content\Images\Female-02-WF.png" />
     <Content Include="Content\Images\Ferie.png" />
     <Content Include="Content\Images\Fidelity.png" />
     <Content Include="Content\Images\Fidelity1.png" />
@@ -355,6 +350,7 @@
     <Content Include="Content\Images\globe_computer.png" />
     <Content Include="Content\Images\globe_up.png" />
     <Content Include="Content\Images\Google.png" />
+    <Content Include="Content\Images\Hour-Glass.png" />
     <Content Include="Content\Images\HumanResource1.png" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
@@ -450,6 +446,7 @@
     <Content Include="Content\Images\Suppliers.png" />
     <Content Include="Content\Images\Suppliers1.png" />
     <Content Include="Content\Images\tab.png" />
+    <Content Include="Content\Images\Telephone -03.png" />
     <Content Include="Content\Images\Ticket.png" />
     <Content Include="Content\Images\Timer.png" />
     <Content Include="Content\Images\TimeTraker.png" />
@@ -472,6 +469,8 @@
     <Content Include="Content\Images\white-Calendar.png" />
     <Content Include="Content\Images\white-Hair_Stylist.png" />
     <Content Include="Content\Images\white-User.png" />
+    <Content Include="Content\Images\Workflow-01-WF.png" />
+    <Content Include="Content\Images\Wrench-WF.png" />
     <Content Include="Content\Images\zoom_in.png" />
     <Content Include="Content\jquery.mobile-1.3.0.css" />
     <Content Include="Content\jquery.mobile-1.3.0.min.css" />
@@ -502,11 +501,6 @@
     <Content Include="Content\Images\user-logo.png" />
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="packages.config" />
     <Content Include="Screens\Account_Operations\BrowseAccount_Operations.lsml.js">
       <DependentUpon>BrowseAccount_Operations.lsml</DependentUpon>
@@ -660,9 +654,6 @@
     </Content>
     <Content Include="Screens\BrowseAgentByName.lsml.js">
       <DependentUpon>BrowseAgentByName.lsml</DependentUpon>
-    </Content>
-    <Content Include="Screens\BrowseAppointment1.lsml.js">
-      <DependentUpon>BrowseAppointment1.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\BrowseAppointments.lsml.js">
       <DependentUpon>BrowseAppointments.lsml</DependentUpon>
@@ -913,8 +904,17 @@
     <Content Include="Screens\ScheduleSet\AddEditSchedule1.lsml.js">
       <DependentUpon>AddEditSchedule1.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\ScheduleSet\BrowseAppointment1.lsml.js">
+      <DependentUpon>BrowseAppointment1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ScheduleSet\BrowseSchedule1.lsml.js">
+      <DependentUpon>BrowseSchedule1.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ScheduleSet\ViewSchedule1.lsml.js">
       <DependentUpon>ViewSchedule1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Task\ViewTask.lsml.js">
+      <DependentUpon>ViewTask.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\ViewAppointment.lsml.js">
       <DependentUpon>ViewAppointment.lsml</DependentUpon>
@@ -940,8 +940,6 @@
     <Content Include="Screens\VW_SellByPassagesChartTemplate.lsml.js">
       <DependentUpon>VW_SellByPassagesChartTemplate.lsml</DependentUpon>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\clippy.min.js" />
     <Content Include="Scripts\datajs-1.1.0.js" />
     <Content Include="Scripts\datajs-1.1.0.min.js" />
@@ -1056,6 +1054,7 @@
     <LightSwitchModel Include="Properties\ApplicationData\Account_Operations.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\Appointments.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\Parameters.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Task.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
@@ -1118,11 +1117,11 @@
     <LightSwitchModel Include="Screens\AddEditTodoList.lsml" />
     <LightSwitchModel Include="Screens\AddEditWorkSpace.lsml" />
     <LightSwitchModel Include="Screens\Appointment4ScheduleScheduleMultipleResourceTemplate.lsml" />
+    <LightSwitchModel Include="Screens\Temp.lsml" />
     <LightSwitchModel Include="Screens\BrowseAccounts.lsml" />
     <LightSwitchModel Include="Screens\BrowseAccount_Ledgers.lsml" />
     <LightSwitchModel Include="Screens\BrowseAccount_Lists.lsml" />
     <LightSwitchModel Include="Screens\BrowseAgentByName.lsml" />
-    <LightSwitchModel Include="Screens\BrowseAppointment1.lsml" />
     <LightSwitchModel Include="Screens\BrowseAppointments.lsml" />
     <LightSwitchModel Include="Screens\BrowseAppointment_By_Date.lsml" />
     <LightSwitchModel Include="Screens\BrowseAvailableEmployees.lsml" />
@@ -1212,8 +1211,12 @@
     <LightSwitchModel Include="Screens\Parameters\ViewParameter.lsml" />
     <LightSwitchModel Include="Screens\ScheduleSet\AddEditAppointment.lsml" />
     <LightSwitchModel Include="Screens\ScheduleSet\AddEditSchedule1.lsml" />
+    <LightSwitchModel Include="Screens\ScheduleSet\BrowseAppointment1.lsml" />
     <LightSwitchModel Include="Screens\ScheduleSet\BrowseSchedule1.lsml" />
     <LightSwitchModel Include="Screens\ScheduleSet\ViewSchedule1.lsml" />
+    <LightSwitchModel Include="Screens\Task\AddEditTask.lsml" />
+    <LightSwitchModel Include="Screens\Task\BrowseTask.lsml" />
+    <LightSwitchModel Include="Screens\Task\ViewTask.lsml" />
     <LightSwitchModel Include="Screens\ViewAppointment.lsml" />
     <LightSwitchModel Include="Screens\ViewComunication.lsml" />
     <LightSwitchModel Include="Screens\ViewCustomer.lsml" />

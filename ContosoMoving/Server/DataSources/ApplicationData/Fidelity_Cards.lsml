@@ -77,7 +77,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Increment"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -86,12 +86,6 @@
             Scale="9" />
           <DisplayName
             Value="% Incremento" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
-            <Property
-              Name="DecimalDigits"
-              Value="0" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -113,7 +107,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Money_Value"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -121,12 +115,6 @@
             Scale="2" />
           <DisplayName
             Value="Valore premio" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

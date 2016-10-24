@@ -138,7 +138,7 @@
                     <ContentItem
                       Name="Photo"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Image?">
+                      DataType=":Binary?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -212,7 +212,7 @@
                     <ContentItem
                       Name="Price"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>

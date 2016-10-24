@@ -2,7 +2,7 @@
 <Application
   Name="LightSwitchApplication"
   TargetPlatform="RichClient"
-  Logo="Microsoft.LightSwitch.UserImageResources::Resources\logo salon coach.png"
+  Logo="Microsoft.LightSwitch.UserImageResources::Resources\Appointment.jpg"
   Version="1.0.0.0"
   DefaultNavigationItem="!module/NavigationItems[Tasks]"
   Shell="Microsoft.LightSwitch.RichClient:Standard"

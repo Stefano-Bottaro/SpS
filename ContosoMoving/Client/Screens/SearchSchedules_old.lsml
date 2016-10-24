@@ -83,7 +83,7 @@
               <ContentItem
                 Name="Debit"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -114,7 +114,7 @@
               <ContentItem
                 Name="Credit"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -145,7 +145,7 @@
               <ContentItem
                 Name="Settlement"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -194,7 +194,7 @@
               <ContentItem
                 Name="Total_Document"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -267,7 +267,7 @@
                     <ContentItem
                       Name="Credit1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -280,7 +280,7 @@
                     <ContentItem
                       Name="Debit1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -297,7 +297,7 @@
                     <ContentItem
                       Name="Settlement1"
                       Kind="Value"
-                      DataType="Microsoft.LightSwitch.Extensions:Money?">
+                      DataType=":Decimal?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>

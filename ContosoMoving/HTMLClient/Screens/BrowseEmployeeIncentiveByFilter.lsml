@@ -273,7 +273,7 @@
                   <ContentItem
                     Name="Global_Objective_Target"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.Attributes>
                       <DisplayName
                         Value="Target" />
@@ -290,7 +290,7 @@
                   <ContentItem
                     Name="Individual_Objective_A_Target"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -343,7 +343,7 @@
                   <ContentItem
                     Name="Global_Objective_Value"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.Attributes>
                       <DisplayName
                         Value="Consuntivo" />
@@ -360,7 +360,7 @@
                   <ContentItem
                     Name="Individual_Objective_A_Value"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>

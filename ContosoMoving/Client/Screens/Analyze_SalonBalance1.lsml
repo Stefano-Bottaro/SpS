@@ -212,8 +212,7 @@
               <ContentItem
                 Name="Commission"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Provvigioni" />
@@ -270,8 +269,7 @@
               <ContentItem
                 Name="Sales"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Vendite (Imponibile)" />
@@ -319,8 +317,7 @@
               <ContentItem
                 Name="Avg_receipt"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Media Scontrino (Imponibile)" />
@@ -1365,30 +1362,10 @@
       </ScreenProperty>
       <ScreenProperty
         Name="Sales"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
-        <ScreenProperty.Attributes>
-          <DisplayName
-            Value="Vendite" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
+        PropertyType=":Decimal?" />
       <ScreenProperty
         Name="Avg_receipt"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
-        <ScreenProperty.Attributes>
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
+        PropertyType=":Decimal?" />
       <ScreenProperty
         Name="Type_Services"
         PropertyType=":String?" />
@@ -1409,28 +1386,16 @@
         PropertyType=":String?" />
       <ScreenProperty
         Name="Commission"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <ScreenProperty.Attributes>
           <Required />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenProperty
         Name="Incentive"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        PropertyType=":Decimal">
         <ScreenProperty.Attributes>
           <Required />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenProperty

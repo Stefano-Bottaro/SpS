@@ -75,7 +75,7 @@
               <ContentItem
                 Name="Mail"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:EmailAddress">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -226,7 +226,7 @@
                 <ContentItem
                   Name="Discount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

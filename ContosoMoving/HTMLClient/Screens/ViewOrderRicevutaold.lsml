@@ -120,7 +120,7 @@
                       <ContentItem
                         Name="Logo"
                         Kind="Value"
-                        DataType="Microsoft.LightSwitch.Extensions:Image">
+                        DataType=":Binary">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -752,7 +752,7 @@
                   <ContentItem
                     Name="Total1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -846,7 +846,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -903,7 +903,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -960,7 +960,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

@@ -101,7 +101,7 @@
                 <ContentItem
                   Name="Email"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -140,7 +140,7 @@
                 <ContentItem
                   Name="Logo"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image">
+                  DataType=":Binary">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -153,7 +153,7 @@
                 <ContentItem
                   Name="Mail_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -166,7 +166,7 @@
                 <ContentItem
                   Name="Sms_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -301,7 +301,7 @@
               <ContentItem
                 Name="Companies_SelectedItem_Logo"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image">
+                DataType=":Binary">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -385,7 +385,7 @@
                 <ContentItem
                   Name="Email1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -461,7 +461,7 @@
                 <ContentItem
                   Name="Companies_SelectedItem_Mail_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -478,7 +478,7 @@
                 <ContentItem
                   Name="Companies_SelectedItem_Sms_Server"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

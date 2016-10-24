@@ -179,7 +179,7 @@
                   <ContentItem
                     Name="Price_List"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -192,7 +192,7 @@
                   <ContentItem
                     Name="Cost"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -205,7 +205,7 @@
                   <ContentItem
                     Name="Price"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -258,7 +258,7 @@
                   <ContentItem
                     Name="Discount"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -299,7 +299,7 @@
                   <ContentItem
                     Name="Commission"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?"
+                    DataType=":Decimal?"
                     View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
@@ -341,7 +341,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -379,7 +379,7 @@
                 <ContentItem
                   Name="Vat_perc"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:PercentViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -417,7 +417,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -455,7 +455,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -499,7 +499,7 @@
                 <ContentItem
                   Name="Order_Item_Shipping_Perc"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:PercentViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -515,7 +515,7 @@
                 <ContentItem
                   Name="Order_Item_Shipping_Value"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.MobileWeb:MoneyViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>

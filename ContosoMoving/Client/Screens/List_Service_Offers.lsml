@@ -65,7 +65,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -78,7 +78,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -104,7 +104,7 @@
                 <ContentItem
                   Name="Commission_employee"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -292,8 +292,7 @@
               <ContentItem
                 Name="Picture1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?"
-                View="Microsoft.LightSwitch.Extensions:ImageViewerControl">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -335,8 +334,7 @@
                 <ContentItem
                   Name="Price1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -367,7 +365,7 @@
                 <ContentItem
                   Name="Commission_employee1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>

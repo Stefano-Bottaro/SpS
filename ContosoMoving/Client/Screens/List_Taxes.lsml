@@ -60,7 +60,7 @@
               <ContentItem
                 Name="Value"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Percent">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

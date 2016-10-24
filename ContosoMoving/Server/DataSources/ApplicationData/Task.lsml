@@ -5,7 +5,10 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="TodoList">
+    Name="Task">
+    <EntityType.Attributes>
+      <CreatedModifiedPropertiesEnabled />
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -24,71 +27,119 @@
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
-        Name="RowVersion"
-        PropertyType=":RowVersion">
-        <EntityProperty.Attributes>
-          <UseForConcurrency />
-          <Generated />
-          <Hidden />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Description"
+        Name="Name"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
           <MaxLength
-            Value="255" />
-          <DisplayName
-            Value="Descrizione" />
+            Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="DeadLine"
-        PropertyType=":Date">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-          <DisplayName
-            Value="Data Scadenza" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Owner"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
-          <DisplayName
-            Value="Responsabile" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="created"
-        PropertyType=":Date?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Hidden />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Status"
+        Name="Type"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
           <MaxLength
-            Value="255" />
+            Value="15" />
+          <SupportedValue
+            Value="Lavoro" />
+          <SupportedValue
+            Value="Famiglia" />
+          <SupportedValue
+            Value="Hobby" />
+          <SupportedValue
+            Value="Salute" />
+          <SupportedValue
+            Value="Altro" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="State"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="15" />
           <SupportedValue
             Value="Da Fare" />
           <SupportedValue
-            Value="In corso" />
+            Value="In Corso" />
           <SupportedValue
             Value="Sospeso" />
           <SupportedValue
-            Value="Chiuso" />
-          <DisplayName
-            Value="Stato" />
+            Value="Concluso" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DateLimit"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Note"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Assigned"
+        Association="Task_Employee"
+        FromEnd="Task"
+        ToEnd="Employee" />
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Generated />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -99,14 +150,14 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="TodoLists"
+      Name="Task"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="TodoList" />
+      EntityType="Task" />
     <QueryOperation
-      Name="TodoLists_Single"
-      ReturnType="TodoList">
+      Name="Task_Single"
+      ReturnType="Task">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -132,7 +183,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="TodoLists" />
+            Member="Task" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -145,8 +196,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="TodoLists_SingleOrDefault"
-      ReturnType="TodoList">
+      Name="Task_SingleOrDefault"
+      ReturnType="Task">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -172,7 +223,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="TodoLists" />
+            Member="Task" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -185,4 +236,19 @@
       </QueryOperationParameter>
     </QueryOperation>
   </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Task">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Task_Employee"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
 </ServiceApplication>

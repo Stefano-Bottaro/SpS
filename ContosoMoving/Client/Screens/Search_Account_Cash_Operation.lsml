@@ -115,7 +115,7 @@
               <ContentItem
                 Name="Credit"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Dare" />
@@ -132,7 +132,7 @@
               <ContentItem
                 Name="Debit"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?">
+                DataType=":Decimal?">
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Avere" />

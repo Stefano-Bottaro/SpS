@@ -26,11 +26,10 @@
     <ExtensionAssembly>EJ.DataVisualization.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
     <ExtensionAssembly>EJ.Web.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
     <ExtensionAssembly>EJ.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
-    <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
-    <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Syncfusion.LightSwitch.Extension.XlsIO.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
     <ExtensionAssembly>Syncfusion.LightSwitch.Extension.XlsIO.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
     <ExtensionAssembly>Syncfusion.XlsIO.Silverlight, Version=13.2500.0.29, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89</ExtensionAssembly>
     <ExtensionAssembly>Syncfusion.Compression.Silverlight, Version=13.2500.0.29, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89</ExtensionAssembly>
+    <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
   </ExtensionAssemblies>
 </Configuration>

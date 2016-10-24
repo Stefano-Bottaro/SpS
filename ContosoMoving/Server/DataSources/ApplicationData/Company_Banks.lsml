@@ -88,7 +88,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Trust"
-        PropertyType="Microsoft.LightSwitch.Extensions:Money?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
@@ -96,12 +96,6 @@
             Scale="2" />
           <DisplayName
             Value="Fido" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
-            <Property
-              Name="CurrencySymbol"
-              Value="€" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

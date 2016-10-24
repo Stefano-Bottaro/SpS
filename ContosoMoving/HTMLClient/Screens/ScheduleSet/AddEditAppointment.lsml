@@ -145,7 +145,7 @@
                           <ScreenExpressionTree>
                             <ChainExpression>
                               <ConstantExpression
-                                Value="15"
+                                Value="20"
                                 ResultType=":Int32" />
                             </ChainExpression>
                           </ScreenExpressionTree>
@@ -220,7 +220,7 @@
                         <ContentItem
                           Name="Photo"
                           Kind="Value"
-                          DataType="Microsoft.LightSwitch.Extensions:Image?">
+                          DataType=":Binary?">
                           <ContentItem.DataSource>
                             <ScreenExpressionTree>
                               <ChainExpression>
@@ -335,7 +335,7 @@
                           <ScreenExpressionTree>
                             <ChainExpression>
                               <ConstantExpression
-                                Value="15"
+                                Value="20"
                                 ResultType=":Int32" />
                             </ChainExpression>
                           </ScreenExpressionTree>

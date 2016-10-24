@@ -75,8 +75,7 @@
                 <ContentItem
                   Name="StartDate"
                   Kind="Value"
-                  DataType=":DateTime"
-                  View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
+                  DataType=":DateTime">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -101,7 +100,7 @@
                       <ScreenExpressionTree>
                         <ChainExpression>
                           <ConstantExpression
-                            Value="15"
+                            Value="20"
                             ResultType=":Int32" />
                         </ChainExpression>
                       </ScreenExpressionTree>
@@ -193,8 +192,7 @@
                 <ContentItem
                   Name="EndDate"
                   Kind="Value"
-                  DataType=":DateTime"
-                  View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
+                  DataType=":DateTime">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -219,7 +217,7 @@
                       <ScreenExpressionTree>
                         <ChainExpression>
                           <ConstantExpression
-                            Value="15"
+                            Value="20"
                             ResultType=":Int32" />
                         </ChainExpression>
                       </ScreenExpressionTree>
@@ -258,6 +256,36 @@
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
                   </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Employee_Name"
+                  IsHidden="True"
+                  Kind="Value"
+                  DataType=":String?"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Appointment/Properties[Employee_Name]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EmployeeId"
+                  IsHidden="True"
+                  Kind="Value"
+                  DataType=":Int32?"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Appointment/Properties[EmployeeId]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource

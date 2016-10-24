@@ -99,8 +99,7 @@
                 <ContentItem
                   Name="Total2"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -349,7 +348,7 @@
                 <ContentItem
                   Name="Service_Document_Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -374,7 +373,7 @@
                 <ContentItem
                   Name="Service_Document_Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -399,7 +398,7 @@
                 <ContentItem
                   Name="Service_Document_Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -453,8 +452,7 @@
                 <ContentItem
                   Name="Service_Document_Payoff1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -549,8 +547,7 @@
                 <ContentItem
                   Name="Price_List"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -573,7 +570,7 @@
                 <ContentItem
                   Name="Discount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -604,7 +601,7 @@
                 <ContentItem
                   Name="Amount"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.RichClient:Label">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -640,8 +637,7 @@
                 <ContentItem
                   Name="Vat_perc"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Percent?"
-                  View="Microsoft.LightSwitch.Extensions:PercentViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -684,7 +680,7 @@
                 <ContentItem
                   Name="Vat"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.RichClient:Label">
                   <ContentItem.Attributes>
                     <DisplayName
@@ -724,8 +720,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -787,8 +782,7 @@
                 <ContentItem
                   Name="Total1"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money"
-                  View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -922,7 +916,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1182,7 +1176,7 @@
                   <ContentItem
                     Name="Total_Document1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1195,7 +1189,7 @@
                   <ContentItem
                     Name="Credit1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1208,7 +1202,7 @@
                   <ContentItem
                     Name="Debit1"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1397,7 +1391,7 @@
                 <ContentItem
                   Name="Total_Document"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1410,7 +1404,7 @@
                 <ContentItem
                   Name="Credit"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1423,7 +1417,7 @@
                 <ContentItem
                   Name="Debit"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money?">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1553,8 +1547,7 @@
             <ContentItem
               Name="Service_Document_Payoff"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Money?"
-              View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+              DataType=":Decimal?">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -1617,8 +1610,7 @@
                   <ContentItem
                     Name="Service_Document_AvailablePrepaid"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?"
-                    View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1663,7 +1655,7 @@
                   <ContentItem
                     Name="Service_Document_Payment_Prepayd"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1678,7 +1670,7 @@
                   <ContentItem
                     Name="Service_Document_Payment_Point"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1693,7 +1685,7 @@
                   <ContentItem
                     Name="Service_Document_Payment"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1787,8 +1779,7 @@
               <ContentItem
                 Name="Service_Histories_SelectedItem_Price1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -1822,7 +1813,7 @@
               <ContentItem
                 Name="Service_Histories_SelectedItem_Total1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money"
+                DataType=":Decimal"
                 View="Microsoft.LightSwitch.RichClient:Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
@@ -1929,8 +1920,7 @@
               <ContentItem
                 Name="Service_Histories_SelectedItem_Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -1964,8 +1954,7 @@
               <ContentItem
                 Name="Service_Histories_SelectedItem_Total"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

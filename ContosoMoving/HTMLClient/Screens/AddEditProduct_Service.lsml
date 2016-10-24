@@ -52,7 +52,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  DataType=":Binary?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -97,7 +97,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -359,7 +359,7 @@
                         <ContentItem
                           Name="Value"
                           Kind="Value"
-                          DataType="Microsoft.LightSwitch.Extensions:Percent">
+                          DataType=":Decimal">
                           <ContentItem.DataSource>
                             <ScreenExpressionTree>
                               <ChainExpression>
@@ -375,7 +375,7 @@
                   <ContentItem
                     Name="Amount"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -390,7 +390,7 @@
                   <ContentItem
                     Name="Commission_employee"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Percent?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -424,7 +424,7 @@
                   <ContentItem
                     Name="Vat_perc"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Percent?"
+                    DataType=":Decimal?"
                     View="Microsoft.LightSwitch.MobileWeb:PercentViewer">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
@@ -440,7 +440,7 @@
                   <ContentItem
                     Name="Vat"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Money?">
+                    DataType=":Decimal?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -620,7 +620,7 @@
                 <ContentItem
                   Name="Cost"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -633,7 +633,7 @@
                 <ContentItem
                   Name="Total"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Money">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -699,7 +699,7 @@
             <ContentItem
               Name="Picture1"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Image?"
+              DataType=":Binary?"
               View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

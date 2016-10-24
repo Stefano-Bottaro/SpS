@@ -44,8 +44,7 @@
               <ContentItem
                 Name="Picture"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Image?"
-                View="Microsoft.LightSwitch.Extensions:ImageViewerControl">
+                DataType=":Binary?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -225,8 +224,7 @@
               <ContentItem
                 Name="Price"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money?"
-                View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+                DataType=":Decimal?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

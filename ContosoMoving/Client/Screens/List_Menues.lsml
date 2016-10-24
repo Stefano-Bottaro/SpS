@@ -71,8 +71,7 @@
                   <ContentItem
                     Name="Menues_SelectedItem_Picture"
                     Kind="Value"
-                    DataType="Microsoft.LightSwitch.Extensions:Image?"
-                    View="Microsoft.LightSwitch.Extensions:ImageViewerControl">
+                    DataType=":Binary?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>

@@ -140,7 +140,7 @@
               <ContentItem
                 Name="Value"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:Money">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -264,7 +264,7 @@
             <ContentItem
               Name="OverHead_By_Year_SelectedItem_Value"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Money">
+              DataType=":Decimal">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -359,7 +359,7 @@
             <ContentItem
               Name="OverHead_By_Year_SelectedItem_Value1"
               Kind="Value"
-              DataType="Microsoft.LightSwitch.Extensions:Money">
+              DataType=":Decimal">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>

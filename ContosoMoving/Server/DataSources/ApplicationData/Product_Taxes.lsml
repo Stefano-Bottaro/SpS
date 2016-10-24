@@ -50,7 +50,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Value"
-        PropertyType="Microsoft.LightSwitch.Extensions:Percent">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -61,12 +61,6 @@
           <DecimalConstraint
             Precision="18"
             Scale="9" />
-          <Attribute
-            Class="Microsoft.LightSwitch.Extensions:@FormatParameter">
-            <Property
-              Name="DecimalDigits"
-              Value="0" />
-          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

@@ -17,15 +17,11 @@
           <BinaryExpression
             NodeType="GreaterThan">
             <BinaryExpression.Left>
-              <ChainExpression>
-                <MemberExpression
-                  Member="Expense" />
-              </ChainExpression>
+              <ChainExpression />
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ConstantExpression
-                Value="0"
-                ResultType="Microsoft.LightSwitch.Extensions:Money?" />
+                Value="0" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>

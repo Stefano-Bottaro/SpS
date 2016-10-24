@@ -307,7 +307,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="ApplicationData/Members[Appointments]" />
+                  Member="ApplicationData/Members[AppointmentByDay]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -315,10 +315,21 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseSchedule1/Properties[Appointments]/Query" />
+              Target="BrowseSchedule1/Properties[Appointments]/Query">
+              <ArgumentExpression
+                Parameter="StartDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseSchedule1/Properties[AppointmentStartDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="AppointmentStartDate"
+        PropertyType=":DateTime?" />
     </Screen.Properties>
   </Screen>
   <Application.Methods>

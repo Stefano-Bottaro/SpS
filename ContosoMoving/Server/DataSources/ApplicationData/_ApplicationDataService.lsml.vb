@@ -1,5 +1,4 @@
-﻿
-Namespace LightSwitchApplication
+﻿Namespace LightSwitchApplication
 
     Public Class ApplicationDataService
 
@@ -68,7 +67,7 @@ Namespace LightSwitchApplication
         Private Sub Top3Employee_PreprocessQuery(ByRef query As System.Linq.IQueryable(Of LightSwitchApplication.Employee))
             query = (From empl In query Order By empl.Total_Sales Descending).Take(3)
         End Sub
-   
+
         Private Sub Statist_Customer_Segmentation_PreprocessQuery(ByRef query As System.Linq.IQueryable(Of LightSwitchApplication.Statist))
             'Svuota l 'entità statistiche se esiste una statistica fatta con lo stesso nome       
             Dim ListaDelete = (From s In Statists Where s.Statistic_Name = "Customer Segmentation")
@@ -122,14 +121,14 @@ Namespace LightSwitchApplication
 
             If tot > 0 Then
                 Dim Lista = (From o In Orders
-                            Where o.Year = Year
-                            Group By month = o.Month
-                            Into g = Group
-                            Select New With
-                                {
-                                    .month = month,
-                                    .visit = g.Count(Function(i) i.Id)
-                                }
+                             Where o.Year = Year
+                             Group By month = o.Month
+                             Into g = Group
+                             Select New With
+                                 {
+                                     .month = month,
+                                     .visit = g.Count(Function(i) i.Id)
+                                 }
                             )
                 'scrive sull'entità statistiche
                 For Each obj In Lista
@@ -166,13 +165,13 @@ Namespace LightSwitchApplication
                              Where o.Year = Year And o.New_Customer = True
                              Group By month = o.Month
                              Into g = Group
-                                Select New With
-                                {
-                                    .Amount = g.Sum(Function(i) i.Amount),
-                                    .month = month,
-                                    .new_customer = g.Count(Function(i) i.New_Customer),
-                                    .avg = g.Average(Function(i) i.Amount)
-                                }
+                             Select New With
+                             {
+                                 .Amount = g.Sum(Function(i) i.Amount),
+                                 .month = month,
+                                 .new_customer = g.Count(Function(i) i.New_Customer),
+                                 .avg = g.Average(Function(i) i.Amount)
+                             }
                             )
                 'scrive sull'entità statistiche 
                 For Each obj In Lista
@@ -202,14 +201,14 @@ Namespace LightSwitchApplication
                         Where ord.Year = Year
                         Into Sum(ord.Amount)
             Dim Lista = (From o In Orders
-                            Where o.Year = Year
-                            Group By month = o.Month Into g = Group
-                            Select New With
-                                {
-                                    .month = month,
-                                    .Amount = g.Sum(Function(i) i.Amount),
-                                    .count = g.Count(Function(i) i.Id)
-                                }
+                         Where o.Year = Year
+                         Group By month = o.Month Into g = Group
+                         Select New With
+                             {
+                                 .month = month,
+                                 .Amount = g.Sum(Function(i) i.Amount),
+                                 .count = g.Count(Function(i) i.Id)
+                             }
                         )
             'scrive sull'entità statistiche
             Dim ListaStatist = New List(Of Statist)
@@ -256,13 +255,13 @@ Namespace LightSwitchApplication
                     Tmp = Tmp.Where(Function(x) CInt((x.Month / 3) + 0.9) = Quarter)
                 End If
                 Dim Lista = (From o In Tmp
-                            Group By category = o.Product.Product_Category.Description
-                            Into g = Group
-                            Select New With
-                                {
-                                    .category = category,
-                                    .Amount = g.Sum(Function(i) i.Amount)
-                                }
+                             Group By category = o.Product.Product_Category.Description
+                             Into g = Group
+                             Select New With
+                                 {
+                                     .category = category,
+                                     .Amount = g.Sum(Function(i) i.Amount)
+                                 }
                             )
                 'scrive sull'entità statistiche
                 For Each obj In Lista
@@ -311,12 +310,12 @@ Namespace LightSwitchApplication
                 Dim Lista = (From o In Tmp
                              Group By product = o.Product.Description
                              Into g = Group
-                                Select New With
-                                {
-                                    .description = product,
-                                    .Amount = g.Sum(Function(i) i.Amount),
-                                    .visit = g.Distinct.Count(Function(i) i.Order.Id)
-                                }
+                             Select New With
+                             {
+                                 .description = product,
+                                 .Amount = g.Sum(Function(i) i.Amount),
+                                 .visit = g.Distinct.Count(Function(i) i.Order.Id)
+                             }
                             )
                 'scrive sull'entità statistiche 
                 For Each obj In Lista
@@ -346,18 +345,18 @@ Namespace LightSwitchApplication
             Dim tot = Aggregate ord In Orders
                        Where ord.Year = Year
                         Into Sum(ord.Amount)
-           
+
             If tot > 0 Then
                 Dim Lista = (From o In Orders
-                                Where o.Year = Year
-                                Group By hour = o.Document_DataStart.Value.Hour
-                                Into g = Group
-                                Select New With
-                                    {
-                                        .category = hour,
-                                        .Amount = g.Sum(Function(i) i.Amount),
-                                        .visit = g.Count(Function(i) i.Id)
-                                    }
+                             Where o.Year = Year
+                             Group By hour = o.Document_DataStart.Value.Hour
+                             Into g = Group
+                             Select New With
+                                 {
+                                     .category = hour,
+                                     .Amount = g.Sum(Function(i) i.Amount),
+                                     .visit = g.Count(Function(i) i.Id)
+                                 }
                             )
                 'scrive sull'entità statistiche
                 For Each obj In Lista
@@ -403,12 +402,12 @@ Namespace LightSwitchApplication
                 Dim Lista = (From o In Tmp
                              Group By product = o.Product.Description
                              Into g = Group
-                                Select New With
-                                {
-                                    .description = product,
-                                    .Amount = g.Sum(Function(i) i.Amount),
-                                     .visit = g.Distinct.Count(Function(i) i.Order.Id)
-                                }
+                             Select New With
+                             {
+                                 .description = product,
+                                 .Amount = g.Sum(Function(i) i.Amount),
+                                  .visit = g.Distinct.Count(Function(i) i.Order.Id)
+                             }
                             )
                 'scrive sull'entità statistiche 
                 For Each obj In Lista
@@ -446,7 +445,7 @@ Namespace LightSwitchApplication
 
             If tot > 0 Then
                 Dim ord = From o In Orders
-                            Where o.Year = Year
+                          Where o.Year = Year
                 If (Month.HasValue) Then
                     ord = ord.Where(Function(x) x.Month = Month)
                 End If

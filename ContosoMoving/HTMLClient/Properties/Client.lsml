@@ -57,6 +57,9 @@
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
       Name="link"
-      Method="!module/Methods[showBrowseTopTenEmployee]" />
+      Method="!module/Methods[showBrowseTask]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showTemp]" />
   </Application.NavigationItems>
 </Application>

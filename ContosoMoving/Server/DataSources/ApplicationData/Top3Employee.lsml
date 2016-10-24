@@ -24,10 +24,7 @@
       <QueryOperation.SortCriteria>
         <SortCriterion
           Direction="Descending">
-          <ChainExpression>
-            <MemberExpression
-              Member="Total_Sales" />
-          </ChainExpression>
+          <ChainExpression />
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>

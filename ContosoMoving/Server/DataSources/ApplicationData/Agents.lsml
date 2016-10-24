@@ -61,13 +61,13 @@
       </EntityProperty>
       <EntityProperty
         Name="Mail"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
-          <MaxLength
-            Value="255" />
           <DisplayName
             Value="e-mail" />
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

@@ -143,7 +143,7 @@
                 <ContentItem
                   Name="Picture"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:Image?"
+                  DataType=":Binary?"
                   View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
